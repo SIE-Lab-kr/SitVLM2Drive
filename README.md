@@ -37,8 +37,6 @@ SitLLM2Drive/
 │       └── graph_example.jpg
 └── annotations_format.md         # JSON schema and semantic descriptions
 
-
-
 ## 🔍 Annotation Levels
 
 - **Scene-Level**: Caption, maneuver, cause, goal, safety, regulation, and action suggestions.
@@ -82,6 +80,8 @@ Edges denote directed causal relationships between objects or between object and
 ]
 
 
+
+
 ## 📊 Tasks Supported
 
 - Visual Reasoning (Discovery, Interventions, Associations)
@@ -90,13 +90,18 @@ Edges denote directed causal relationships between objects or between object and
 - Traffic Policy Compliance
 - Visual QA for Driving
 
+
+
+
 ## 🔐 License
 
 Released under the [MIT License](LICENSE).
 
+
 ## 📚 Citation
 
 If you use this dataset in your work, please cite:
+
 
 ```bibtex
 @misc{SitLLM2Drive2025,
