@@ -2,7 +2,9 @@
 **SitVLM2Drive** is a multimodal benchmark dataset designed for autonomous vehicle (AV) perception, planning, and reasoning in complex real-world scenarios. It integrates rich scene-level intent annotations, object-level causal graphs, structured Q&A pairs, and safety-critical reasoning — aligned under complex real-world conditions.
 
 https://github.com/SIE-Lab-kr/SitLLM2Drive-/blob/main/Videos/CCoT.mp4
-
+<video width="100%" controls autoplay muted>
+  <source src="[../videos/demo.mp4](https://github.com/SIE-Lab-kr/SitLLM2Drive-/blob/main/Videos/CCoT.mp4)" type="video/mp4">
+</video>
 ---
 
 ## 📦 Dataset Overview
