@@ -73,36 +73,63 @@ Supported Object Domains:
   
 Each node follows the format:
 ```json
-[
-  "object_tag<bb>xmin,ymin,xmax,ymax<bb>",
-  {
-    "obj_name": "car",
-    "object_type": "Ego-Vehicle",
-    "boxes": [xmin, ymin, xmax, ymax],
-    "Status": [...],
-    "Object_Safety": [...],
-    "position": [...],
-    "Object_Causal": "ego<po>711,708<po>",
-    "Causal_Relation": "Direct",
-    "Is_causal": "Cause"
-  }
-]
-
-## Graph Edges
-
-Edges denote directed causal relationships between objects or between object and ego:
-
-[
-  ["traffic light<bb>700,39,737,130<bb>", "ego<po>711,708<po>", "Direct"]
-]
-
-## QA
 {
-  "Q": "How should the ego vehicle behave given the current intersection?",
-  "A": "The ego vehicle should yield to oncoming traffic before turning left...",
-  "Type": "CCot",
-  "Task": "Planning-Based",
-  ...
+  "Objects": [
+    [
+      "car<bb>500,300,560,360<bb>",
+      {
+        "obj_name": "car",
+        "object_type": "Ego-Vehicle",
+        "boxes": [500, 300, 560, 360],
+        "Status": ["Moving", "Turning Left"],
+        "Object_Safety": ["Affects Safety"],
+        "position": ["In Intersection", "Left of Ego"],
+        "Object_Causal": "ego<po>711,708<po>",
+        "Causal_Relation": "Direct",
+        "Is_causal": "Cause"
+      }
+    ],
+    [
+      "traffic light<bb>700,39,737,130<bb>",
+      {
+        "obj_name": "traffic light",
+        "object_type": "Infrastructure",
+        "boxes": [700, 39, 737, 130],
+        "Status": ["Green"],
+        "Object_Safety": ["Does Not Affect Safety"],
+        "position": ["Above Intersection", "Ahead of Ego"],
+        "Object_Causal": "ego<po>711,708<po>",
+        "Causal_Relation": "Indirect",
+        "Is_causal": "Effect"
+      }
+    ]
+  ],
+
+  "Graph_Edges": [
+    ["traffic light<bb>700,39,737,130<bb>", "ego<po>711,708<po>", "Indirect"],
+    ["car<bb>500,300,560,360<bb>", "ego<po>711,708<po>", "Direct"]
+  ],
+
+  "QA": [
+    {
+      "Q": "How should the ego vehicle behave given the current intersection?",
+      "A": "The ego vehicle should yield to oncoming traffic before turning left, as the traffic light is green but does not provide a protected left turn.",
+      "Type": "CCot",
+      "Task": "Planning-Based",
+      "question_task": "Context-Based",
+      "AV_Task": "plan",
+      "scene_scenario": "Normal"
+    },
+    {
+      "Q": "What is the causal relationship between the ego vehicle and the oncoming car?",
+      "A": "The oncoming car is directly influencing the ego vehicle’s decision to wait before turning left.",
+      "Type": "Association",
+      "Task": "Planning-Based",
+      "question_task": "Explanation-Based",
+      "AV_Task": "prediction",
+      "scene_scenario": "Normal"
+    }
+  ]
 }
 
 ```
