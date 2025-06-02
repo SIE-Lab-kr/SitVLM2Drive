@@ -1,10 +1,7 @@
 # SitLLM2Drive: Scene-Intent-Task for Causal Planning in AVs
 **SitVLM2Drive** is a multimodal benchmark dataset designed for autonomous vehicle (AV) perception, planning, and reasoning in complex real-world scenarios. It integrates rich scene-level intent annotations, object-level causal graphs, structured Q&A pairs, and safety-critical reasoning — aligned under complex real-world conditions.
 
-<iframe width="560" height="315" 
-  src="https://www.youtube.com/embed/YVAGqxpPudw?autoplay=1" 
-  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+[![Watch Demo]([docs/figs/sample_frame.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://github.com/SIE-Lab-kr/SitLLM2Drive-/blob/main/Videos/CCoT.mp4))
 
 ---
 
