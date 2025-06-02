@@ -8,8 +8,11 @@
 
 ## 📁 Dataset Structure
 dataset/
+
 ├── video_0001.json # scene annotations
+
 frames/
+
 ├── video_0001/ # corresponding images
 
 ## ✍️ Annotations
@@ -33,7 +36,11 @@ Use tools in `scripts/` for analysis and statistics extraction.
 - 76 unique object types
 
 ## 💡 Applications
-- Planning under uncertainty
+- 
 - Causal reasoning in traffic
 - Visual question answering for AVs
 
+- 
+**Tasks**: Perception, Planning, Action Suggestions, Planning under uncertainty, Causal Reasoning, etc
+**Modality**: Vision + Text + Graphs  
+**Safety-Critical**: 24% of scenarios  
