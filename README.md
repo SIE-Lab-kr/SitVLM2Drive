@@ -13,28 +13,35 @@ SitLLM2Drive is a multi-modal dataset for autonomous vehicle (AV) research. It i
 ## 📁 Dataset Structure
 
 SitLLM2Drive/
-├── README.md
-├── LICENSE
-├── .gitignore
-├── requirements.txt
+
 ├── dataset/                       # Annotations
+
 │   ├── video_0001.json
+
 │   ├── video_0002.json
+
 │   └── ...
+
 ├── frames/                        # Frame images
+
 │   ├── video_0001/
+
 │   │   ├── frame_000001.jpg
+
 │   │   └── ...
+
 │   └── video_0002/
-├── scripts/                       # Utility and analysis tools
-│   ├── extract_statistics.py
-│   └── visualize_annotations.py
+
 ├── docs/                          # Extended documentation and visuals
+
 │   ├── annotation_guide.pdf
-│   ├── dataset_card.md
-│   └── figs/
+
+├── figs/
+
 │       ├── scene_example.jpg
+
 │       └── graph_example.jpg
+
 └── annotations_format.md         # JSON schema and semantic descriptions
 
 ## 🔍 Annotation Levels
@@ -44,30 +51,45 @@ SitLLM2Drive/
 
 # Annotation Format: SitLLM2Drive
 
-Each frame-level JSON contains:
+Each Scene-Level contains:
 
 - `image_id`: Frame file name (e.g., "frame_000012.jpg")
 - `caption`: Free-text summary
 - `maneuver`: Intent/behavior (e.g., "Turn left")
 - `cause`: List of contributing factors
-- `graph`: Semantic object-level graph
+- `goal-oriented`: Long-term AV objective
 - `QA`: List of planning-based reasoning QA pairs
 - `safe`: Safety assessment
 - `Action Suggestions`: Recommended maneuver
 - `Traffic Regulations Suggestions`: Road rule prompts
 
-## Graph Node Schema
+Object-Level contains:
 
+Causal and semantic information about:
+- **Vehicles** (moving, parked, turning)
+- **Road Users** (pedestrians, cyclists)
+- **Infrastructure** (traffic lights, signs, markings)
+- **Geometry** (intersections, lanes, medians)
+- **Hazards** (potholes, debris)
+
+Objects are annotated with:
+- Bounding boxes or keypoints
+- Position, intent, and causality
+- Impact on safety and navigation
 Each node follows the format:
 ```json
 [
   "object_tag<bb>xmin,ymin,xmax,ymax<bb>",
   {
     "obj_name": "car",
+    "object_type": "Ego-Vehicle",
     "boxes": [xmin, ymin, xmax, ymax],
-    "importance_ranking": "high",
     "Status": [...],
-    ...
+    "Object_Safety": [...],
+    "position": [...],
+    "Object_Causal": "ego<po>711,708<po>",
+    "Causal_Relation": "Direct",
+    "Is_causal": "Cause"
   }
 ]
 
@@ -78,9 +100,17 @@ Edges denote directed causal relationships between objects or between object and
 [
   ["traffic light<bb>700,39,737,130<bb>", "ego<po>711,708<po>", "Direct"]
 ]
+
+## QA
+{
+  "Q": "How should the ego vehicle behave given the current intersection?",
+  "A": "The ego vehicle should yield to oncoming traffic before turning left...",
+  "Type": "CCot",
+  "Task": "Planning-Based",
+  ...
+}
+
 ```
-
-
 
 ## 📊 Tasks Supported
 
@@ -88,9 +118,10 @@ Edges denote directed causal relationships between objects or between object and
 - Scene Planning under Uncertainty
 - Causal Analysis & Prediction
 - Traffic Policy Compliance
-- Visual QA for Driving
-
-
+- Visual QA for Driving (Planning, Prediction, Regulation, etc..)
+- Safety Evaluation & Interventions
+- Scene Understanding & Captioning
+- Intent & Maneuver Prediction
 
 
 ## 🔐 License
