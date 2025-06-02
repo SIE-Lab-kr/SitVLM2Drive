@@ -71,7 +71,7 @@ Supported Object Domains:
 - **Hazards** (potholes, debris)
 
   
-Each node follows the format:
+example:
 ```json
 {
   "Objects": [
