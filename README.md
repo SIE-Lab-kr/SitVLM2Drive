@@ -36,11 +36,12 @@ Use tools in `scripts/` for analysis and statistics extraction.
 - 76 unique object types
 
 ## 💡 Applications
-- 
 - Causal reasoning in traffic
 - Visual question answering for AVs
 
-- 
+
 **Tasks**: Perception, Planning, Action Suggestions, Planning under uncertainty, Causal Reasoning, etc
+
 **Modality**: Vision + Text + Graphs  
+
 **Safety-Critical**: 24% of scenarios  
