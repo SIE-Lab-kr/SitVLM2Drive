@@ -1,49 +1,40 @@
 # SitLLM2Drive: Scene-Intent-Task for Causal Planning in AVs
+**SitVLM2Drive** is a multimodal benchmark dataset designed for autonomous vehicle (AV) perception, planning, and reasoning in complex real-world scenarios. It integrates rich scene-level intent annotations, object-level causal graphs, structured Q&A pairs, and safety-critical reasoning — aligned under complex real-world conditions.
 
-SitLLM2Drive is a multi-modal dataset for autonomous vehicle (AV) research. It integrates scene-level planning context, object-level causal graphs, and high-level reasoning questions to evaluate perception, planning, and safety under complex real-world conditions.
+---
 
-## 🌐 Dataset Overview
+## 📦 Dataset Overview
 
-- **495** urban driving videos
-- **10,000+** annotated frames
-- **2.08 million** QA pairs (reasoning & planning tasks)
-- **76** unique object types
-- **24%** scenes labeled as safety-critical
+| Attribute              | Value                        |
+|------------------------|------------------------------|
+| Total Videos           | 495                          |
+| Annotated Frames       | 10,250                       |
+| QA Pairs               | 2,083,050                    |
+| Unique Object Types    | 76                           |
+| Safety-Critical Scenes | 24%                          |
+| Causal Reasoning Types | Discovery, Association, Intervention, Counterfactual |
+| AV Tasks Supported     | Perception, Prediction, Planning, Action |
+
 
 ## 📁 Dataset Structure
-
+```bash
 SitLLM2Drive/
-
 ├── JSON/                       # Annotations
-
 │   ├── video_0001.json
-
 │   ├── video_0002.json
-
 │   └── ...
-
 ├── frames/                        # Frame images
-
 │   ├── video_0001/
-
 │   │   ├── frame_000001.jpg
-
 │   │   └── ...
-
 │   └── video_0002/
-
 ├── docs/                          # Extended documentation and visuals
-
 │   ├── annotation_guide.pdf
-
 ├── figs/
-
 │       ├── scene_example.jpg
-
 │       └── graph_example.jpg
-
 └── annotations_format.md         # JSON schema and semantic descriptions
-
+```
 ## 🔍 Annotation Levels
 
 - **Scene-Level**: Caption, maneuver, cause, goal, safety, regulation, and action suggestions.
@@ -59,23 +50,25 @@ Each Scene-Level contains:
 - `cause`: List of contributing factors
 - `goal-oriented`: Long-term AV objective
 - `QA`: List of planning-based reasoning QA pairs
-- `safe`: Safety assessment
+- `safe`: Safety status + rationale
 - `Action Suggestions`: Recommended maneuver
 - `Traffic Regulations Suggestions`: Road rule prompts
 
-Object-Level contains:
+Object-Level are annotated with:
+- obj_name, object_type, Bounding boxes or keypoints `boxes` or `point` coordinates
+- Position: Relative spatial location
+- Status
+- Impact on safety: Affects / Requires Monitoring / Does Not Affect
+- `Is_causal`: Cause / Effect (graph-linked)
 
-Causal and semantic information about:
+Supported Object Domains:
 - **Vehicles** (moving, parked, turning)
 - **Road Users** (pedestrians, cyclists)
 - **Infrastructure** (traffic lights, signs, markings)
 - **Geometry** (intersections, lanes, medians)
 - **Hazards** (potholes, debris)
 
-Objects are annotated with:
-- Bounding boxes or keypoints
-- Position, intent, and causality
-- Impact on safety and navigation
+  
 Each node follows the format:
 ```json
 [
@@ -114,12 +107,12 @@ Edges denote directed causal relationships between objects or between object and
 
 ## 📊 Tasks Supported
 
-- Visual Reasoning (Discovery, Interventions, Associations)
+- Visual Reasoning (Discovery, Associations, Interventions, Counterfactual )
 - Scene Planning under Uncertainty
 - Causal Analysis & Prediction
 - Traffic Policy Compliance
 - Visual QA for Driving (Planning, Prediction, Regulation, etc..)
-- Safety Evaluation & Interventions
+- Safety status + rationale
 - Scene Understanding & Captioning
 - Intent & Maneuver Prediction
 
