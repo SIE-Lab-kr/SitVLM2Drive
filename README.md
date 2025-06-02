@@ -14,7 +14,7 @@ SitLLM2Drive is a multi-modal dataset for autonomous vehicle (AV) research. It i
 
 SitLLM2Drive/
 
-├── dataset/                       # Annotations
+├── JSON/                       # Annotations
 
 │   ├── video_0001.json
 
