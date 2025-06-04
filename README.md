@@ -21,15 +21,16 @@
 ## 📁 Dataset Structure
 ```bash
 SitLLM2Drive/
-├── JSON/                       # Annotations
-│   ├── video_0001.json
-│   ├── video_0002.json
-│   └── ...
-├── frames/                        # Frame images
-│   ├── video_0001/
-│   │   ├── frame_000001.jpg
-│   │   └── ...
-│   └── video_0002/
+├── Sample of Dataset
+├──   ├──JSON/                       # Annotations
+│     │  ├── video_0001.json
+│     │  ├── video_0002.json
+│     └── ...
+├──   frames/                        # Frame images
+│     ├── video_0001/
+│     │   ├── frame_000001.jpg
+│     │   └── ...
+│     └── video_0002/
 ├── docs/                          # Extended documentation and visuals
 │   ├── annotation_guide.pdf
 ├── figs/
