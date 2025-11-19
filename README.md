@@ -153,19 +153,26 @@ example:
 - Intent & Maneuver Prediction
 
 ## 🔐 License
-### Data Access Requirements
-SitVLM2Drive is built upon a curated subset of the Honda Research Institute – Advice Dataset (HAD). Due to licensing restrictions, the original HAD dataset cannot be redistributed in this repository. Users must download the HAD dataset directly from Honda Research Institute (HRI) under their terms of use.
 
-### How to Obtain the HAD Dataset
-To use SitVLM2Drive, you must first obtain the HAD dataset through one of the official HRI channels:
-- **Official Dataset Page:** [HAD Dataset](https://usa.honda-ri.com/had)
-- **Direct Dataset Request Form:** [Request Form](https://usa.honda-ri.com/dataset-request-form?dataset=had)
+### Data Access Requirements
+SitVLM2Drive is based on a curated subset of the Honda Research Institute – Advice Dataset (HAD). Due to licensing restrictions, the original HAD dataset cannot be redistributed through this repository. Users must download the HAD dataset directly from the Honda Research Institute (HRI) under their terms of use.
 
 ### Eligibility Requirements
 According to HRI’s licensing terms:
 - The HAD dataset is available for non-commercial research use only.
-- You must be affiliated with a university.
-- You are required to submit the request using your official university email address.
+- Users must be affiliated with a university.
+- Requests must be submitted using an official university email address.
+
+### How to Obtain the HAD Dataset
+To utilize SitVLM2Drive, you must first acquire the HAD dataset through one of the official HRI channels:
+- **Official Dataset Page:** [HAD Dataset](https://usa.honda-ri.com/had)
+- **Direct Dataset Request Form:** [Request Form](https://usa.honda-ri.com/dataset-request-form?dataset=had)
+
+## SitVLM2Drive Licensing
+The annotations, causal graphs, and QA pairs associated with SitVLM2Drive are provided under a non-commercial research license since they are derived from the HAD dataset. 
+
+You may use, modify, and extend SitVLM2Drive only for non-commercial academic research purposes.
+
 For those affiliated with a university, an alternative request link for our dataset is available here: [Alternative University-Affiliated Request Link](https://docs.google.com/forms/d/e/1FAIpQLSdUrMu3t3zgc4NSzA7rJbWeQDrGYR6KDMHQQEIv31pbLWj2JA/viewform?usp=publish-editor).
 
 ## 📚 Citation
