@@ -13,10 +13,16 @@
 | Annotated Frames       | 10,250                       |
 | QA Pairs               | 2,083,050                    |
 | Unique Object Types    | 76                           |
-| Safety-Critical Scenes | 24%                          |
 | Causal Reasoning Types | Discovery, Association, Intervention, Counterfactual |
 | AV Tasks Supported     | Perception, Prediction, Planning, Action |
 
+
+🚗 Qualitative Scenarios
+We provide four illustrative cases:
+  Normal Scenario
+  Missed Detection Scenario
+  Out-of-Distribution Scenario
+  Adversarial Attack Scenario
 
 ## 📁 Dataset Structure
 ```bash
@@ -114,7 +120,7 @@ example:
   "QA": [
     {
       "Q": "How should the ego vehicle behave given the current intersection?",
-      "A": "The ego vehicle should yield to oncoming traffic before turning left, as the traffic light is green but does not provide a protected left turn.",
+      "A": "1) Scene Safety: The environment is classified as 'unsafe' based on the safety indicator.\n2) Cause Analysis in condition is primarily due to: Intersection Congestion, Right-of-Way.\n3) Ego Motion: The current motion parameters are: speed = 0.0 MPH, steering angle = -1.2\u00b0.\n4) Vehicle Intent: goal: 'Turn left', maneuver: 'yield to oncoming traffic and wait to turn left when traffic in the oncoming lane is clear and make the left turn then continue down the block then stop at intersection and turns left and the stop light is green i am stopped at the light  i am waiting to turn left i turn left and after all cars in oncoming traffic either turn or keep straight', scene description: 'cars are coming in the opposite lane and while are waiting to turn left ... then the stop light is green cars are coming i turn left'.\n5) Object & Causal Analysis: Objects affecting safety: traffic light, car, car, traffic light, TS_Yield, traffic light, car, T-Intersection, crosswalk, crosswalk, car, car, car; Potentially affecting objects: pedestrian, pedestrian, TS_No_U_Turn, Manhole. Additionally, Causal relations: traffic light<bb>700,39,737,130<bb> -> ego<po>711,708<po> (relation: Direct (causal)), car<bb>600,317,661,362<bb> -> ego<po>711,708<po> (relation: Chain (causal)), car<bb>345,320,472,398<bb> -> ego<po>711,708<po> (relation: Chain (causal)), traffic light<bb>283,201,306,249<bb> -> ego<po>711,708<po> (relation: Direct (causal)), TS_Yield<bb>800,51,838,92<bb> -> ego<po>711,708<po> (relation: Confounder (causal)), traffic light<bb>1142,186,1180,257<bb> -> ego<po>711,708<po> (relation: Direct (causal)), car<bb>659,315,687,337<bb> -> ego<po>711,708<po> (relation: Chain (causal)), car<bb>408,332,583,429<bb> -> ego<po>711,708<po> (relation: Chain (causal)), car<bb>680,313,698,331<bb> -> ego<po>711,708<po> (relation: Chain (causal)), car<bb>705,300,721,317<bb> -> ego<po>711,708<po> (relation: Chain (causal)).\n6) Traffic & Action Guidance: action: 'Yield', traffic regulations: 'TS_Yield'.\n7) Conclusion: Given the unsafe condition, proceed with heightened caution.",
       "Type": "CCot",
       "Task": "Planning-Based",
       "question_task": "Context-Based",
@@ -123,7 +129,7 @@ example:
     },
     {
       "Q": "What is the causal relationship between the ego vehicle and the oncoming car?",
-      "A": "The oncoming car is directly influencing the ego vehicle’s decision to wait before turning left.",
+      "A": "The oncoming cars is directly influencing the ego vehicle’s decision to wait before turning left. causal relationship graph car<bb>659,315,687,337<bb> -> ego<po>711,708<po> (relation: Chain (causal)), car<bb>408,332,583,429<bb> -> ego<po>711,708<po> (relation: Chain (causal)), car<bb>680,313,698,331<bb> -> ego<po>711,708<po> (relation: Chain (causal)), car<bb>705,300,721,317<bb> -> ego<po>711,708<po> (relation: Chain (causal)).",
       "Type": "Association",
       "Task": "Planning-Based",
       "question_task": "Explanation-Based",
@@ -146,21 +152,31 @@ example:
 - Scene Understanding & Captioning
 - Intent & Maneuver Prediction
 
-
 ## 🔐 License
+### Data Access Requirements
+SitVLM2Drive is built upon a curated subset of the Honda Research Institute – Advice Dataset (HAD). Due to licensing restrictions, the original HAD dataset cannot be redistributed in this repository. Users must download the HAD dataset directly from Honda Research Institute (HRI) under their terms of use.
 
-Released under the [MIT License](LICENSE).
+### How to Obtain the HAD Dataset
+To use SitVLM2Drive, you must first obtain the HAD dataset through one of the official HRI channels:
+- **Official Dataset Page:** [HAD Dataset](https://usa.honda-ri.com/had)
+- **Direct Dataset Request Form:** [Request Form](https://usa.honda-ri.com/dataset-request-form?dataset=had)
 
+### Eligibility Requirements
+According to HRI’s licensing terms:
+- The HAD dataset is available for non-commercial research use only.
+- You must be affiliated with a university.
+- You are required to submit the request using your official university email address.
+For those affiliated with a university, an alternative request link for our dataset is available here: [Alternative University-Affiliated Request Link](https://docs.google.com/forms/d/e/1FAIpQLSdUrMu3t3zgc4NSzA7rJbWeQDrGYR6KDMHQQEIv31pbLWj2JA/viewform?usp=publish-editor).
 
 ## 📚 Citation
 
 If you use this dataset in your work, please cite:
 
 
-```bibtex
+```bibtex Will editing after Acceptance
 @misc{SitLLM2Drive2025,
-  title={SitLLM2Drive: Scene-Intent-Task Dataset for Causal Planning in Autonomous Driving},
+  title={SitVLM2Drive: A Causal Reasoning QA Benchmark for Situational Awareness in Autonomous Driving},
   author={Your Name et al.},
   year={2025},
-  url={https://github.com/your-org/SitLLM2Drive}
+  url={https://github.com/SIE-Lab-kr/SitLLM2Drive-}
 }
