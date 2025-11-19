@@ -170,10 +170,10 @@ For those affiliated with a university, an alternative request link for our data
 
 ## 📚 Citation
 
-If you use this dataset in your work, please cite:
+If you use this dataset in your work, please cite: Will editing after Acceptance
 
 
-```bibtex Will editing after Acceptance
+```bibtex 
 @misc{SitLLM2Drive2025,
   title={SitVLM2Drive: A Causal Reasoning QA Benchmark for Situational Awareness in Autonomous Driving},
   author={Your Name et al.},
