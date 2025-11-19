@@ -39,6 +39,7 @@ SitLLM2Drive/
 │     └── video_0002/
 ├── docs/                          # Extended documentation and visuals
 │   ├── annotation_guide.pdf
+│   ├── Supplementary Material– Dataset.pdf
 ├── figs/
 │       ├── scene_example.jpg
 │       └── graph_example.jpg
@@ -68,7 +69,7 @@ Object-Level are annotated with:
 - Position: Relative spatial location
 - Status
 - Impact on safety: Affects / Requires Monitoring / Does Not Affect
-- `Is_causal`: Cause / Effect (graph-linked)
+- `Is_causal`: Cause / Effect
 
 Supported Object Domains:
 - **Vehicles** (moving, parked, turning)
