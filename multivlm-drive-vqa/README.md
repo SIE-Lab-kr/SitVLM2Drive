@@ -1,17 +1,17 @@
 # Multi-VLM Drive VQA (LLaMA, Qwen, InternVL)
 
-This repo trains and evaluates **Vision-Language Models (VLMs)** on a driving
+This repo trains and evaluates **Vision-Language Models (VLMs)** on a Sit2VLMDrive dataset driving
 question–answering dataset with video frames (`frames/`) and annotations (`json/`).
 
 Supported backends:
 
-- **LLaMA Vision** (e.g. `meta-llama/Llama-3.2-11B-Vision`)
-- **Qwen2.5-VL** (e.g. `Qwen/Qwen2.5-VL-7B-Instruct`)
-- **InternVL** (tested with `OpenGVLab/InternVL3-1B-hf` from Hugging Face)
+- **LLaMA Vision** ( `meta-llama/Llama-3.2-11B-Vision`)
+- **Qwen2.5-VL** (`Qwen/Qwen2.5-VL-7B-Instruct`)
+- **InternVL** ( `OpenGVLab/InternVL3-1B-hf`)
 
 Common features:
 
-- Shared dataset loader (`DrivingVideoDataset`)
+- Shared dataset loader (`Sit2VLMDrive`)
 - Evaluation metrics:
   - BLEU-1...4, ROUGE-1/2/L, CIDEr
   - BERTScore (P/R/F1)
