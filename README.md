@@ -184,7 +184,7 @@ If you use this dataset in your work, please cite: Will editing after Acceptance
 ```bibtex 
 @misc{SitLLM2Drive2025,
   title={SitVLM2Drive: A Causal Reasoning QA Benchmark for Situational Awareness in Autonomous Driving},
-  author={Your Name et al.},
+  author={Our Name et al.},
   year={2025},
   url={https://github.com/SIE-Lab-kr/SitLLM2Drive-}
 }
