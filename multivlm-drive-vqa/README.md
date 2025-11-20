@@ -21,8 +21,6 @@ Common features:
 
 ---
 
-## 1. Installation
-
 ```bash
 git clone https://github.com/<Our-username>/multivlm-drive-vqa.git
 cd multivlm-drive-vqa
