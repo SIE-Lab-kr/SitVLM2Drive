@@ -28,13 +28,18 @@ We provide four illustrative cases:
 ```bash
 SitLLM2Drive/
 ├── Sample of Dataset
-├──   ├──JSON/                       # Annotations
+├──   ├──JSON/ # Annotations three filder data for all data, by_AV_Task, and by_AV_Task
 │     │  ├── video_0001.json
 │     │  ├── video_0002.json
 │     └── ...
 ├──   frames/                        # Frame images
 │     ├── video_0001/
 │     │   ├── frame_000001.jpg
+│     │   └── ...
+│     └── video_0002/
+├──   diagrams/
+│     ├── video_0001/
+│     │   ├── frame_000001_diagram.png
 │     │   └── ...
 │     └── video_0002/
 ├── docs/                          # Extended documentation and visuals
