@@ -24,7 +24,7 @@ We provide four illustrative cases:
   Out-of-Distribution Scenario
   Adversarial Attack Scenario
 
-## 📁 Dataset Structure
+## 📁 Project Structure
 ```bash
 SitLLM2Drive/
 ├── Sample of Dataset
