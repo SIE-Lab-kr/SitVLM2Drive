@@ -197,7 +197,7 @@ The annotations, causal graphs, and QA pairs associated with SitVLM2Drive are pr
 
 You may use, modify, and extend SitVLM2Drive only for non-commercial academic research purposes.
 
-For those affiliated with a university, an alternative request link for our dataset is available here: [Alternative University-Affiliated Request Link](https://docs.google.com/forms/d/e/1FAIpQLSdUrMu3t3zgc4NSzA7rJbWeQDrGYR6KDMHQQEIv31pbLWj2JA/viewform?usp=publish-editor).
+For those affiliated with a university, an alternative request link for our dataset is available here: [Request Link](https://docs.google.com/forms/d/e/1FAIpQLSdUrMu3t3zgc4NSzA7rJbWeQDrGYR6KDMHQQEIv31pbLWj2JA/viewform?usp=publish-editor).
 
 ## 📚 Citation
 
