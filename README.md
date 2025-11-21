@@ -64,7 +64,7 @@ Each Scene-Level contains:
 - `maneuver`: Intent/behavior (e.g., "Turn left")
 - `cause`: List of contributing factors
 - `goal-oriented`: Long-term AV objective
-- `QA`: List of planning-based reasoning QA pairs
+- `QA`: List of causal-based reasoning QA pairs
 - `safe`: Safety status + rationale
 - `Action Suggestions`: Recommended maneuver
 - `Traffic Regulations Suggestions`: Road rule prompts
