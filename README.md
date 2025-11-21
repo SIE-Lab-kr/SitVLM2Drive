@@ -28,7 +28,7 @@ We provide four illustrative cases:
 ```bash
 SitLLM2Drive/
 ├── Sample of Dataset
-├──   ├──JSON/ # Annotations three filder data for all data, by_AV_Task, and by_AV_Task
+├──   ├──JSON/ # Annotations into three folders called: data for all data, by_AV_Task, and by_AV_Task
 │     │  ├── video_0001.json
 │     │  ├── video_0002.json
 │     └── ...
