@@ -46,9 +46,27 @@ SitLLM2Drive/
 │   ├── annotation_guide.pdf
 │   ├── Supplementary Material– Dataset.pdf
 ├── figs/
-│       ├── scene_example.jpg
-│       └── graph_example.jpg
-└── annotations_format.md         # JSON schema and semantic descriptions
+│       ├── example.png
+│       └── ...
+└── multivlm-drive-vqa/
+│     ├── models/
+│     │  ├── internvl_vl.py
+│     │  ├── llama_vl.py
+│     │  ├── qwen_vl.py
+│     │
+│     └── utils/
+│     │  ├── Annotator GUI
+│     │  ├── Generating QA
+│     │  ├── Generating_caption_maneuver
+│     │  ├── Position --H Shape
+│     │  ├── Creatinggraph.py
+│     │  ├── utils.py
+│     └
+│     ├── train.py
+│     └── metrics.py
+│     ├── chatGPT_Eval.ipynb
+│     └── data.py
+└──
 ```
 ## 🔍 Annotation Levels
 
