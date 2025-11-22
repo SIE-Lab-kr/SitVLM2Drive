@@ -95,11 +95,11 @@ Object-Level are annotated with:
 - `Is_causal`: Cause / Effect
 
 Supported Object Domains:
-- **Vehicles** (moving, parked, turning)
-- **Road Users** (pedestrians, cyclists)
-- **Infrastructure** (traffic lights, signs, markings)
-- **Geometry** (intersections, lanes, medians)
-- **Hazards** (potholes, debris)
+- **Vehicles** (moving, parked, turning, ...)
+- **Road Users** (pedestrians, cyclists, ...)
+- **Infrastructure** (traffic lights, signs, markings, ...)
+- **Geometry** (intersections, lanes, medians, ...)
+- **Hazards** (potholes, debris, ...)
 
   
 example:
