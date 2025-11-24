@@ -225,7 +225,7 @@ Sample of Dataset/
         ├── 0000_frame_0000_annotated.png
         ├── ...
         └── video_xxxx_causal_strip.png
-
+```
 ## 🔐 License
 
 ### Data Access Requirements
