@@ -201,7 +201,7 @@ The figure below shows one frame with:
 - Object labels optionally include **importance ranking** (high / medium / low), which reflects the driver’s attention priority.
 
 <p align="center">
-  <img src="figs/example_causal_frame.png" alt="Single-frame causal graph visualization" width="80%">
+  <img src="Sample of Dataset/graphs/test0001/annotated_frames/0000_frame_0000.jpg" alt="Single-frame causal graph visualization" width="80%">
 </p>
 
 ### Multi-Frame Causal Strip
@@ -219,7 +219,7 @@ Each frame in the strip:
 A **single legend** is shared across the entire strip and placed at the bottom for clarity.
 
 <p align="center">
-  <img src="figs/example_causal_strip.png" alt="Temporal strip of frames with causal graph overlays and shared legend" width="100%">
+  <img src="Sample of Dataset/graphs/test0001/test0001_annotated_strip.png" alt="Temporal strip of frames with causal graph overlays and shared legend" width="100%">
 </p>
 
 These visualizations are generated directly from the JSON annotations in:
