@@ -221,10 +221,12 @@ Sample of Dataset/
 ├── frames/      # Raw frame images (per video)
 └── graphs/      # Auto-generated diagrams and annotated frames
     └── video_xxxx/
+        ├── annotated_frames/
+            └── 0000_frame_0001.jpg #image annotated with causal graph
+        ├── 0000_frame_0000_diagram.dot
         ├── 0000_frame_0000_diagram.png
-        ├── 0000_frame_0000_annotated.png
         ├── ...
-        └── video_xxxx_causal_strip.png
+        └── video_xxxx_causal_strip_sample.png
 ```
 ## 🔐 License
 
