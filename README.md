@@ -209,15 +209,6 @@ The figure below shows one frame with:
 To illustrate temporal evolution, we also render a **sequence of annotated frames** as a horizontal strip.  
 This allows you to see how the causal graph and safety-critical objects change as the ego vehicle approaches an intersection.
 
-Each frame in the strip:
-
-- Shows object bounding boxes or points (e.g., traffic lights, crosswalks, pedestrians, ego vehicle)
-- Draws arrows between objects linked by a non-empty `Causal_Relation`
-- Keeps the **same color conventions** for safety and causal types as above
-- Includes a small text label under each frame (e.g., `frame_0000`, `frame_0005`, …)
-
-A **single legend** is shared across the entire strip and placed at the bottom for clarity.
-
 <p align="center">
   <img src="Sample of Dataset/graphs/test0001/test0001_annotated_strip.png" alt="Temporal strip of frames with causal graph overlays and shared legend" width="100%">
 </p>
