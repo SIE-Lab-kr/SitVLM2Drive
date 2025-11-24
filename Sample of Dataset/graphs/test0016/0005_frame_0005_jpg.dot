@@ -1,0 +1,78 @@
+// Causal graph for frame_0005.jpg
+digraph causal_test0016_0005 {
+	node [fontname=Helvetica shape=ellipse style=filled]
+	edge [fontname=Helvetica]
+	bgcolor=mistyrose
+	"car<bb>0,317,354,554<bb>" [label="car
+Moving" fillcolor=green fontcolor=black]
+	"car<bb>850,342,946,390<bb>" [label="car
+[importance: low]
+Parked" fillcolor=green fontcolor=black]
+	"car<bb>699,336,733,358<bb>" [label="car
+Stopped, Rear Brake Light On" fillcolor=green fontcolor=black]
+	"car<bb>571,335,600,356<bb>" [label="car
+Parked" fillcolor=green fontcolor=black]
+	"ego<po>711,708<po>" [label="ego
+[importance: high]
+Moving" fillcolor=red fontcolor=black fontsize=18 height=1.3 penwidth=3 shape=doublecircle width=1.3]
+	"pedestrian<bb>760,334,777,363<bb>" [label="pedestrian
+[importance: high]
+Walking" fillcolor=red fontcolor=black]
+	"drivable area<pl>991,663,305,677<pl>" [label="drivable area
+[importance: high]" fillcolor=gray fontcolor=black]
+	"Stop Marking<bb>356,400,501,447<bb>" [label="Stop Marking
+Visible" fillcolor=green fontcolor=black]
+	"crosswalk<po>457,555<po>" [label="crosswalk
+[importance: medium]
+Visible, zebra, Clear of pedestrians" fillcolor=orange fontcolor=black]
+	"crosswalk<po>637,366<po>" [label="crosswalk
+[importance: high]
+Visible, zebra, Clear of pedestrians" fillcolor=red fontcolor=black]
+	"road<po>595,405<po>" [label="road
+[importance: high]
+One-lane, Median-None" fillcolor=red fontcolor=black]
+	"car<bb>0,317,354,554<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"car<bb>0,317,354,554<bb>" -> "car<bb>0,317,354,554<bb>_status" [color=gray style=dotted]
+	"car<bb>0,317,354,554<bb>_pos" [label="Position: Left side of, On different lane of, left-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>0,317,354,554<bb>" -> "car<bb>0,317,354,554<bb>_pos" [color=gray style=dotted]
+	"car<bb>850,342,946,390<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>850,342,946,390<bb>" -> "car<bb>850,342,946,390<bb>_status" [color=gray style=dotted]
+	"car<bb>850,342,946,390<bb>_pos" [label="Position: Right side of, Is Parked on parking space, right-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>850,342,946,390<bb>" -> "car<bb>850,342,946,390<bb>_pos" [color=gray style=dotted]
+	"car<bb>699,336,733,358<bb>_status" [label="Status: Stopped, Rear Brake Light On" fillcolor=lightgray shape=box]
+	"car<bb>699,336,733,358<bb>" -> "car<bb>699,336,733,358<bb>_status" [color=gray style=dotted]
+	"car<bb>699,336,733,358<bb>_pos" [label="Position: is Ahead of, Lane 1, In same lane of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>699,336,733,358<bb>" -> "car<bb>699,336,733,358<bb>_pos" [color=gray style=dotted]
+	"car<bb>571,335,600,356<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>571,335,600,356<bb>" -> "car<bb>571,335,600,356<bb>_status" [color=gray style=dotted]
+	"car<bb>571,335,600,356<bb>_pos" [label="Position: is off-road, Left side of, Shoulder left, Opposite side of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>571,335,600,356<bb>" -> "car<bb>571,335,600,356<bb>_pos" [color=gray style=dotted]
+	"ego<po>711,708<po>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"ego<po>711,708<po>" -> "ego<po>711,708<po>_status" [color=gray style=dotted]
+	"ego<po>711,708<po>_pos" [label="Position: Lane 1, ground-pixel-wise" fillcolor=lightblue shape=box]
+	"ego<po>711,708<po>" -> "ego<po>711,708<po>_pos" [color=gray style=dotted]
+	"pedestrian<bb>760,334,777,363<bb>_status" [label="Status: Walking" fillcolor=lightgray shape=box]
+	"pedestrian<bb>760,334,777,363<bb>" -> "pedestrian<bb>760,334,777,363<bb>_status" [color=gray style=dotted]
+	"pedestrian<bb>760,334,777,363<bb>_pos" [label="Position: On sidewalk (right), front-pixel-wise" fillcolor=lightblue shape=box]
+	"pedestrian<bb>760,334,777,363<bb>" -> "pedestrian<bb>760,334,777,363<bb>_pos" [color=gray style=dotted]
+	"Stop Marking<bb>356,400,501,447<bb>_status" [label="Status: Visible" fillcolor=lightgray shape=box]
+	"Stop Marking<bb>356,400,501,447<bb>" -> "Stop Marking<bb>356,400,501,447<bb>_status" [color=gray style=dotted]
+	"Stop Marking<bb>356,400,501,447<bb>_pos" [label="Position: On Opposite Lane of, ground-pixel-wise" fillcolor=lightblue shape=box]
+	"Stop Marking<bb>356,400,501,447<bb>" -> "Stop Marking<bb>356,400,501,447<bb>_pos" [color=gray style=dotted]
+	"crosswalk<po>457,555<po>_status" [label="Status: Visible, zebra, Clear of pedestrians" fillcolor=lightgray shape=box]
+	"crosswalk<po>457,555<po>" -> "crosswalk<po>457,555<po>_status" [color=gray style=dotted]
+	"crosswalk<po>457,555<po>_pos" [label="Position: is Ahead of, is Under" fillcolor=lightblue shape=box]
+	"crosswalk<po>457,555<po>" -> "crosswalk<po>457,555<po>_pos" [color=gray style=dotted]
+	"crosswalk<po>637,366<po>_status" [label="Status: Visible, zebra, Clear of pedestrians" fillcolor=lightgray shape=box]
+	"crosswalk<po>637,366<po>" -> "crosswalk<po>637,366<po>_status" [color=gray style=dotted]
+	"crosswalk<po>637,366<po>_pos" [label="Position: is Ahead of, Far of, ground-pixel-wise" fillcolor=lightblue shape=box]
+	"crosswalk<po>637,366<po>" -> "crosswalk<po>637,366<po>_pos" [color=gray style=dotted]
+	"road<po>595,405<po>_status" [label="Status: One-lane, Median-None" fillcolor=lightgray shape=box]
+	"road<po>595,405<po>" -> "road<po>595,405<po>_status" [color=gray style=dotted]
+	"road<po>595,405<po>_pos" [label="Position: ground-pixel-wise" fillcolor=lightblue shape=box]
+	"road<po>595,405<po>" -> "road<po>595,405<po>_pos" [color=gray style=dotted]
+	"drivable area<pl>991,663,305,677<pl>" -> "ego<po>711,708<po>" [label=Chain color=orange fontcolor=red penwidth=2]
+	"crosswalk<po>457,555<po>" -> "ego<po>711,708<po>" [label=Direct color=red fontcolor=orange penwidth=1.2]
+	"road<po>595,405<po>" -> "ego<po>711,708<po>" [label=Direct color=red fontcolor=red penwidth=2]
+	legend [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD COLSPAN="3"><B>Legend</B></TD></TR><TR><TD COLSPAN="3"><B>Object Safety (node fill color)</B></TD></TR><TR><TD>Affects Safety</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Requires Monitoring</TD><TD BGCOLOR="blue" WIDTH="40"></TD><TD></TD></TR><TR><TD>Potentially Affect Safety</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Does Not Affect Safety</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Causal Relation (edge line color)</B></TD></TR><TR><TD>Direct</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Chain</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Confounder</TD><TD BGCOLOR="purple" WIDTH="40"></TD><TD></TD></TR><TR><TD>Correlations</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Importance</B></TD></TR><TR><TD>High</TD><TD>Thicker edge</TD><TD>Label shows "[importance: high]"</TD></TR><TR><TD>Medium</TD><TD>Normal edge</TD><TD>Label shows "[importance: medium]"</TD></TR><TR><TD>Low</TD><TD>Normal edge</TD><TD>Label shows "[importance: low]"</TD></TR></TABLE>> shape=plaintext]
+}

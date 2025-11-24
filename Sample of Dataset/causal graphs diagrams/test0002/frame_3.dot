@@ -1,0 +1,33 @@
+strict digraph {
+SAFE [color=green, size=4500, label=Ego, subset=0];
+"Ego-Ego" [color=teal, size=3200, label="Ego-Ego", subset=1];
+"Ego-Infrastructure" [color=teal, size=3200, label="Ego-\nInfrastructure", subset=1];
+crosswalk [color=gray, size=2600, label=crosswalk, subset=2];
+crosswalk_status [color=lightgray, size=2100, label="Visible, Between\ntwo lines, Clear\nof pedestrians", subset=3];
+crosswalk_position [color=lightblue, size=2100, label="is Ahead of", subset=3];
+road [color=red, size=2600, label=road, subset=2];
+road_status [color=lightgray, size=2100, label="Two-lane, Median-\nRaised, Lane_Dashe\nd_Line_White_1", subset=3];
+road_position [color=lightblue, size=2100, label="ground-pixel-wise", subset=3];
+"drivable area" [color=gray, size=2600, label="drivable area", subset=2];
+"drivable area_status" [color=lightgray, size=2100, label="", subset=3];
+"drivable area_position" [color=lightblue, size=2100, label="", subset=3];
+"Ego-Vehicle" [color=teal, size=3200, label="Ego-Vehicle", subset=1];
+ambulance [color=red, size=2600, label=ambulance, subset=2];
+ambulance_status [color=lightgray, size=2100, label="Emergency Lights\nOff, Moving", subset=3];
+ambulance_position [color=lightblue, size=2100, label="is Ahead of, Lane\n1, In same lane of", subset=3];
+SAFE -> "Ego-Ego";
+SAFE -> "Ego-Infrastructure";
+SAFE -> "Ego-Vehicle";
+"Ego-Infrastructure" -> crosswalk [color=red];
+"Ego-Infrastructure" -> road [color=red];
+"Ego-Infrastructure" -> "drivable area" [color=gray];
+crosswalk -> crosswalk_status [color=gray];
+crosswalk -> crosswalk_position [color=gray];
+road -> road_status [color=gray];
+road -> road_position [color=gray];
+"drivable area" -> "drivable area_status" [color=gray];
+"drivable area" -> "drivable area_position" [color=gray];
+"Ego-Vehicle" -> ambulance [color=red];
+ambulance -> ambulance_status [color=gray];
+ambulance -> ambulance_position [color=gray];
+}

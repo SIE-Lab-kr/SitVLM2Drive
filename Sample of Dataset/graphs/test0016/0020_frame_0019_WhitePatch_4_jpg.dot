@@ -1,0 +1,50 @@
+// Causal graph for frame_0019_WhitePatch_4.jpg
+digraph causal_test0016_0020 {
+	node [fontname=Helvetica shape=ellipse style=filled]
+	edge [fontname=Helvetica]
+	"car<bb>1112,337,1279,425<bb>" [label="car
+Parked" fillcolor=green fontcolor=black]
+	"car<bb>301,314,455,400<bb>" [label="car
+[importance: low]
+Turning Left" fillcolor=orange fontcolor=black]
+	"drivable area<pl>407,662,982,661<pl>" [label="drivable area" fillcolor=gray fontcolor=black]
+	"T-Intersection<po>552,396<po>" [label="T-Intersection
+[importance: high]
+stope sign Controlled" fillcolor=red fontcolor=black]
+	"Stop Marking<bb>11,468,228,549<bb>" [label="Stop Marking
+Visible" fillcolor=green fontcolor=black]
+	"ego<po>711,708<po>" [label="ego
+[importance: high]
+Moving" fillcolor=green fontcolor=black fontsize=18 height=1.3 penwidth=3 shape=doublecircle width=1.3]
+	"road<po>315,575<po>" [label="road
+[importance: high]
+One-lane, Median-Raised" fillcolor=red fontcolor=black]
+	"car<bb>1112,337,1279,425<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>1112,337,1279,425<bb>" -> "car<bb>1112,337,1279,425<bb>_status" [color=gray style=dotted]
+	"car<bb>1112,337,1279,425<bb>_pos" [label="Position: Right side of, Is Parked on parking space, right-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>1112,337,1279,425<bb>" -> "car<bb>1112,337,1279,425<bb>_pos" [color=gray style=dotted]
+	"car<bb>301,314,455,400<bb>_status" [label="Status: Turning Left" fillcolor=lightgray shape=box]
+	"car<bb>301,314,455,400<bb>" -> "car<bb>301,314,455,400<bb>_status" [color=gray style=dotted]
+	"car<bb>301,314,455,400<bb>_pos" [label="Position: Left side of, At intersection, Is Driving on intersection, Opposite side of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>301,314,455,400<bb>" -> "car<bb>301,314,455,400<bb>_pos" [color=gray style=dotted]
+	"T-Intersection<po>552,396<po>_status" [label="Status: stope sign Controlled" fillcolor=lightgray shape=box]
+	"T-Intersection<po>552,396<po>" -> "T-Intersection<po>552,396<po>_status" [color=gray style=dotted]
+	"T-Intersection<po>552,396<po>_pos" [label="Position: is Ahead of" fillcolor=lightblue shape=box]
+	"T-Intersection<po>552,396<po>" -> "T-Intersection<po>552,396<po>_pos" [color=gray style=dotted]
+	"Stop Marking<bb>11,468,228,549<bb>_status" [label="Status: Visible" fillcolor=lightgray shape=box]
+	"Stop Marking<bb>11,468,228,549<bb>" -> "Stop Marking<bb>11,468,228,549<bb>_status" [color=gray style=dotted]
+	"Stop Marking<bb>11,468,228,549<bb>_pos" [label="Position: Left side of, On Opposite Lane of, left-pixel-wise" fillcolor=lightblue shape=box]
+	"Stop Marking<bb>11,468,228,549<bb>" -> "Stop Marking<bb>11,468,228,549<bb>_pos" [color=gray style=dotted]
+	"ego<po>711,708<po>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"ego<po>711,708<po>" -> "ego<po>711,708<po>_status" [color=gray style=dotted]
+	"ego<po>711,708<po>_pos" [label="Position: Lane 1, is Near Intersection, ground-pixel-wise" fillcolor=lightblue shape=box]
+	"ego<po>711,708<po>" -> "ego<po>711,708<po>_pos" [color=gray style=dotted]
+	"road<po>315,575<po>_status" [label="Status: One-lane, Median-Raised" fillcolor=lightgray shape=box]
+	"road<po>315,575<po>" -> "road<po>315,575<po>_status" [color=gray style=dotted]
+	"road<po>315,575<po>_pos" [label="Position: left-pixel-wise" fillcolor=lightblue shape=box]
+	"road<po>315,575<po>" -> "road<po>315,575<po>_pos" [color=gray style=dotted]
+	"drivable area<pl>407,662,982,661<pl>" -> "ego<po>711,708<po>" [label=Chain color=orange fontcolor=gray penwidth=1.2]
+	"T-Intersection<po>552,396<po>" -> "ego<po>711,708<po>" [label=Chain color=orange fontcolor=red penwidth=2]
+	"road<po>315,575<po>" -> "ego<po>711,708<po>" [label=Direct color=red fontcolor=red penwidth=2]
+	legend [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD COLSPAN="3"><B>Legend</B></TD></TR><TR><TD COLSPAN="3"><B>Object Safety (node fill color)</B></TD></TR><TR><TD>Affects Safety</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Requires Monitoring</TD><TD BGCOLOR="blue" WIDTH="40"></TD><TD></TD></TR><TR><TD>Potentially Affect Safety</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Does Not Affect Safety</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Causal Relation (edge line color)</B></TD></TR><TR><TD>Direct</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Chain</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Confounder</TD><TD BGCOLOR="purple" WIDTH="40"></TD><TD></TD></TR><TR><TD>Correlations</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Importance</B></TD></TR><TR><TD>High</TD><TD>Thicker edge</TD><TD>Label shows "[importance: high]"</TD></TR><TR><TD>Medium</TD><TD>Normal edge</TD><TD>Label shows "[importance: medium]"</TD></TR><TR><TD>Low</TD><TD>Normal edge</TD><TD>Label shows "[importance: low]"</TD></TR></TABLE>> shape=plaintext]
+}

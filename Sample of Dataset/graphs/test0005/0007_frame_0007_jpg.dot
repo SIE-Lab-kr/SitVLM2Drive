@@ -1,0 +1,55 @@
+// Causal graph for frame_0007.jpg
+digraph causal_test0005_0007 {
+	node [fontname=Helvetica shape=ellipse style=filled]
+	edge [fontname=Helvetica]
+	bgcolor=honeydew
+	"ego<po>711,708<po>" [label="ego
+[importance: high]" fillcolor=green fontcolor=black fontsize=18 height=1.3 penwidth=3 shape=doublecircle width=1.3]
+	"car<bb>838,316,910,368<bb>" [label="car
+[importance: high]
+Moving" fillcolor=red fontcolor=black]
+	"car<bb>780,315,807,337<bb>" [label="car
+[importance: low]
+Moving" fillcolor=green fontcolor=black]
+	"truck<bb>829,298,873,340<bb>" [label="truck
+[importance: low]
+Moving" fillcolor=green fontcolor=black]
+	"drivable area<pl>324,662,1173,706<pl>" [label="drivable area" fillcolor=gray fontcolor=black]
+	"drivable area<pl>1153,719,503,664<pl>" [label="drivable area
+[importance: high]" fillcolor=gray fontcolor=black]
+	"Manhole<bb>884,506,1041,570<bb>" [label="Manhole
+[importance: medium]
+Closed" fillcolor=orange fontcolor=black]
+	"Manhole<bb>871,446,968,481<bb>" [label="Manhole
+[importance: medium]
+Closed" fillcolor=orange fontcolor=black]
+	"road<po>589,585<po>" [label="road
+[importance: high]" fillcolor=red fontcolor=black]
+	"ego<po>711,708<po>_pos" [label="Position: ground-pixel-wise" fillcolor=lightblue shape=box]
+	"ego<po>711,708<po>" -> "ego<po>711,708<po>_pos" [color=gray style=dotted]
+	"car<bb>838,316,910,368<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"car<bb>838,316,910,368<bb>" -> "car<bb>838,316,910,368<bb>_status" [color=gray style=dotted]
+	"car<bb>838,316,910,368<bb>_pos" [label="Position: is Ahead of, Lane 1" fillcolor=lightblue shape=box]
+	"car<bb>838,316,910,368<bb>" -> "car<bb>838,316,910,368<bb>_pos" [color=gray style=dotted]
+	"car<bb>780,315,807,337<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"car<bb>780,315,807,337<bb>" -> "car<bb>780,315,807,337<bb>_status" [color=gray style=dotted]
+	"car<bb>780,315,807,337<bb>_pos" [label="Position: Left side of, Lane 2, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>780,315,807,337<bb>" -> "car<bb>780,315,807,337<bb>_pos" [color=gray style=dotted]
+	"truck<bb>829,298,873,340<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"truck<bb>829,298,873,340<bb>" -> "truck<bb>829,298,873,340<bb>_status" [color=gray style=dotted]
+	"truck<bb>829,298,873,340<bb>_pos" [label="Position: is Ahead of, Lane 1, front-pixel-wise" fillcolor=lightblue shape=box]
+	"truck<bb>829,298,873,340<bb>" -> "truck<bb>829,298,873,340<bb>_pos" [color=gray style=dotted]
+	"Manhole<bb>884,506,1041,570<bb>_status" [label="Status: Closed" fillcolor=lightgray shape=box]
+	"Manhole<bb>884,506,1041,570<bb>" -> "Manhole<bb>884,506,1041,570<bb>_status" [color=gray style=dotted]
+	"Manhole<bb>884,506,1041,570<bb>_pos" [label="Position: In road (side), right-pixel-wise" fillcolor=lightblue shape=box]
+	"Manhole<bb>884,506,1041,570<bb>" -> "Manhole<bb>884,506,1041,570<bb>_pos" [color=gray style=dotted]
+	"Manhole<bb>871,446,968,481<bb>_status" [label="Status: Closed" fillcolor=lightgray shape=box]
+	"Manhole<bb>871,446,968,481<bb>" -> "Manhole<bb>871,446,968,481<bb>_status" [color=gray style=dotted]
+	"Manhole<bb>871,446,968,481<bb>_pos" [label="Position: In road (side), right-pixel-wise" fillcolor=lightblue shape=box]
+	"Manhole<bb>871,446,968,481<bb>" -> "Manhole<bb>871,446,968,481<bb>_pos" [color=gray style=dotted]
+	"car<bb>838,316,910,368<bb>" -> "ego<po>711,708<po>" [label=Direct color=red fontcolor=red penwidth=2]
+	"drivable area<pl>324,662,1173,706<pl>" -> "ego<po>711,708<po>" [label=Chain color=orange fontcolor=gray penwidth=1.2]
+	"drivable area<pl>1153,719,503,664<pl>" -> "ego<po>711,708<po>" [label=Chain color=orange fontcolor=red penwidth=2]
+	"road<po>589,585<po>" -> "ego<po>711,708<po>" [label=Direct color=red fontcolor=red penwidth=2]
+	legend [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD COLSPAN="3"><B>Legend</B></TD></TR><TR><TD COLSPAN="3"><B>Object Safety (node fill color)</B></TD></TR><TR><TD>Affects Safety</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Requires Monitoring</TD><TD BGCOLOR="blue" WIDTH="40"></TD><TD></TD></TR><TR><TD>Potentially Affect Safety</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Does Not Affect Safety</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Causal Relation (edge line color)</B></TD></TR><TR><TD>Direct</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Chain</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Confounder</TD><TD BGCOLOR="purple" WIDTH="40"></TD><TD></TD></TR><TR><TD>Correlations</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Importance</B></TD></TR><TR><TD>High</TD><TD>Thicker edge</TD><TD>Label shows "[importance: high]"</TD></TR><TR><TD>Medium</TD><TD>Normal edge</TD><TD>Label shows "[importance: medium]"</TD></TR><TR><TD>Low</TD><TD>Normal edge</TD><TD>Label shows "[importance: low]"</TD></TR></TABLE>> shape=plaintext]
+}

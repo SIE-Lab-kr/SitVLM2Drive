@@ -1,0 +1,21 @@
+strict digraph {
+SAFE [color=green, size=4500, label=Ego, subset=0];
+"Ego-Vehicle" [color=teal, size=3200, label="Ego-Vehicle", subset=1];
+car [color=green, size=2600, label=car, subset=2];
+car_status [color=lightgray, size=2100, label="driving on heavy\ntraffic density\nDecelerating and\nAccelerating, Rear\nBrake Light On", subset=3];
+car_position [color=lightblue, size=2100, label="is Ahead of,\nfront-pixel-wise", subset=3];
+"Ego-Ego" [color=teal, size=3200, label="Ego-Ego", subset=1];
+Unknown [color=teal, size=3200, label=Unknown, subset=1];
+train [color=green, size=2600, label=train, subset=2];
+train_status [color=lightgray, size=2100, label=Moving, subset=3];
+train_position [color=lightblue, size=2100, label="Left side of, In\ndifferent lane of,\nfront-pixel-wise", subset=3];
+SAFE -> "Ego-Vehicle";
+SAFE -> "Ego-Ego";
+SAFE -> Unknown;
+"Ego-Vehicle" -> car [color=gray];
+car -> car_status [color=gray];
+car -> car_position [color=gray];
+Unknown -> train [color=gray];
+train -> train_status [color=gray];
+train -> train_position [color=gray];
+}

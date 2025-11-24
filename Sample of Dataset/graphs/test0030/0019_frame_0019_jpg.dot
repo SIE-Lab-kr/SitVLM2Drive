@@ -1,0 +1,80 @@
+// Causal graph for frame_0019.jpg
+digraph causal_test0030_0019 {
+	node [fontname=Helvetica shape=ellipse style=filled]
+	edge [fontname=Helvetica]
+	bgcolor=honeydew
+	"car<bb>991,349,1279,627<bb>" [label="car
+driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=green fontcolor=black]
+	"car<bb>76,317,443,513<bb>" [label="car
+driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=green fontcolor=black]
+	"car<bb>492,341,800,561<bb>" [label="car
+driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On, Stopped" fillcolor=green fontcolor=black]
+	"car<bb>861,337,1076,453<bb>" [label="car
+driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=green fontcolor=black]
+	"car<bb>787,336,891,399<bb>" [label="car
+driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=green fontcolor=black]
+	"car<bb>428,324,550,412<bb>" [label="car
+driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=green fontcolor=black]
+	"car<bb>742,334,802,383<bb>" [label="car
+driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=green fontcolor=black]
+	"car<bb>539,326,579,356<bb>" [label="car
+driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=green fontcolor=black]
+	"car<bb>579,329,615,347<bb>" [label="car
+driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=green fontcolor=black]
+	"car<bb>658,330,702,344<bb>" [label="car
+driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=green fontcolor=black]
+	"ego<po>711,708<po>" [label="ego
+[importance: high]
+Rear Brake Light On" fillcolor=green fontcolor=black fontsize=18 height=1.3 penwidth=3 shape=doublecircle width=1.3]
+	"train<bb>520,288,626,327<bb>" [label="train
+Moving" fillcolor=green fontcolor=black]
+	"car<bb>991,349,1279,627<bb>_status" [label="Status: driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=lightgray shape=box]
+	"car<bb>991,349,1279,627<bb>" -> "car<bb>991,349,1279,627<bb>_status" [color=gray style=dotted]
+	"car<bb>991,349,1279,627<bb>_pos" [label="Position: is Ahead of, right-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>991,349,1279,627<bb>" -> "car<bb>991,349,1279,627<bb>_pos" [color=gray style=dotted]
+	"car<bb>76,317,443,513<bb>_status" [label="Status: driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=lightgray shape=box]
+	"car<bb>76,317,443,513<bb>" -> "car<bb>76,317,443,513<bb>_status" [color=gray style=dotted]
+	"car<bb>76,317,443,513<bb>_pos" [label="Position: is Ahead of, left-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>76,317,443,513<bb>" -> "car<bb>76,317,443,513<bb>_pos" [color=gray style=dotted]
+	"car<bb>492,341,800,561<bb>_status" [label="Status: driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On, Stopped" fillcolor=lightgray shape=box]
+	"car<bb>492,341,800,561<bb>" -> "car<bb>492,341,800,561<bb>_status" [color=gray style=dotted]
+	"car<bb>492,341,800,561<bb>_pos" [label="Position: is Ahead of, ground-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>492,341,800,561<bb>" -> "car<bb>492,341,800,561<bb>_pos" [color=gray style=dotted]
+	"car<bb>861,337,1076,453<bb>_status" [label="Status: driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=lightgray shape=box]
+	"car<bb>861,337,1076,453<bb>" -> "car<bb>861,337,1076,453<bb>_status" [color=gray style=dotted]
+	"car<bb>861,337,1076,453<bb>_pos" [label="Position: is Ahead of, right-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>861,337,1076,453<bb>" -> "car<bb>861,337,1076,453<bb>_pos" [color=gray style=dotted]
+	"car<bb>787,336,891,399<bb>_status" [label="Status: driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=lightgray shape=box]
+	"car<bb>787,336,891,399<bb>" -> "car<bb>787,336,891,399<bb>_status" [color=gray style=dotted]
+	"car<bb>787,336,891,399<bb>_pos" [label="Position: is Ahead of, ground-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>787,336,891,399<bb>" -> "car<bb>787,336,891,399<bb>_pos" [color=gray style=dotted]
+	"car<bb>428,324,550,412<bb>_status" [label="Status: driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=lightgray shape=box]
+	"car<bb>428,324,550,412<bb>" -> "car<bb>428,324,550,412<bb>_status" [color=gray style=dotted]
+	"car<bb>428,324,550,412<bb>_pos" [label="Position: is Ahead of, ground-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>428,324,550,412<bb>" -> "car<bb>428,324,550,412<bb>_pos" [color=gray style=dotted]
+	"car<bb>742,334,802,383<bb>_status" [label="Status: driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=lightgray shape=box]
+	"car<bb>742,334,802,383<bb>" -> "car<bb>742,334,802,383<bb>_status" [color=gray style=dotted]
+	"car<bb>742,334,802,383<bb>_pos" [label="Position: is Ahead of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>742,334,802,383<bb>" -> "car<bb>742,334,802,383<bb>_pos" [color=gray style=dotted]
+	"car<bb>539,326,579,356<bb>_status" [label="Status: driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=lightgray shape=box]
+	"car<bb>539,326,579,356<bb>" -> "car<bb>539,326,579,356<bb>_status" [color=gray style=dotted]
+	"car<bb>539,326,579,356<bb>_pos" [label="Position: is Ahead of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>539,326,579,356<bb>" -> "car<bb>539,326,579,356<bb>_pos" [color=gray style=dotted]
+	"car<bb>579,329,615,347<bb>_status" [label="Status: driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=lightgray shape=box]
+	"car<bb>579,329,615,347<bb>" -> "car<bb>579,329,615,347<bb>_status" [color=gray style=dotted]
+	"car<bb>579,329,615,347<bb>_pos" [label="Position: is Ahead of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>579,329,615,347<bb>" -> "car<bb>579,329,615,347<bb>_pos" [color=gray style=dotted]
+	"car<bb>658,330,702,344<bb>_status" [label="Status: driving on heavy traffic density Decelerating and Accelerating, Rear Brake Light On" fillcolor=lightgray shape=box]
+	"car<bb>658,330,702,344<bb>" -> "car<bb>658,330,702,344<bb>_status" [color=gray style=dotted]
+	"car<bb>658,330,702,344<bb>_pos" [label="Position: is Ahead of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>658,330,702,344<bb>" -> "car<bb>658,330,702,344<bb>_pos" [color=gray style=dotted]
+	"ego<po>711,708<po>_status" [label="Status: Rear Brake Light On" fillcolor=lightgray shape=box]
+	"ego<po>711,708<po>" -> "ego<po>711,708<po>_status" [color=gray style=dotted]
+	"ego<po>711,708<po>_pos" [label="Position: ground-pixel-wise" fillcolor=lightblue shape=box]
+	"ego<po>711,708<po>" -> "ego<po>711,708<po>_pos" [color=gray style=dotted]
+	"train<bb>520,288,626,327<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"train<bb>520,288,626,327<bb>" -> "train<bb>520,288,626,327<bb>_status" [color=gray style=dotted]
+	"train<bb>520,288,626,327<bb>_pos" [label="Position: Left side of, In different lane of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"train<bb>520,288,626,327<bb>" -> "train<bb>520,288,626,327<bb>_pos" [color=gray style=dotted]
+	legend [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD COLSPAN="3"><B>Legend</B></TD></TR><TR><TD COLSPAN="3"><B>Object Safety (node fill color)</B></TD></TR><TR><TD>Affects Safety</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Requires Monitoring</TD><TD BGCOLOR="blue" WIDTH="40"></TD><TD></TD></TR><TR><TD>Potentially Affect Safety</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Does Not Affect Safety</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Causal Relation (edge line color)</B></TD></TR><TR><TD>Direct</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Chain</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Confounder</TD><TD BGCOLOR="purple" WIDTH="40"></TD><TD></TD></TR><TR><TD>Correlations</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Importance</B></TD></TR><TR><TD>High</TD><TD>Thicker edge</TD><TD>Label shows "[importance: high]"</TD></TR><TR><TD>Medium</TD><TD>Normal edge</TD><TD>Label shows "[importance: medium]"</TD></TR><TR><TD>Low</TD><TD>Normal edge</TD><TD>Label shows "[importance: low]"</TD></TR></TABLE>> shape=plaintext]
+}

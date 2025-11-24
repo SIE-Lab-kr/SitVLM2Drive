@@ -1,0 +1,130 @@
+// Causal graph for frame_0005.jpg
+digraph causal_test0031_0005 {
+	node [fontname=Helvetica shape=ellipse style=filled]
+	edge [fontname=Helvetica]
+	bgcolor=mistyrose
+	"car<bb>899,300,1047,343<bb>" [label="car
+Parked" fillcolor=green fontcolor=black]
+	"car<bb>791,312,901,345<bb>" [label="car
+Parked" fillcolor=green fontcolor=black]
+	"traffic light<bb>552,208,566,236<bb>" [label="traffic light
+[importance: high]" fillcolor=red fontcolor=black]
+	"traffic light<bb>429,213,442,240<bb>" [label="traffic light
+[importance: high]" fillcolor=red fontcolor=black]
+	"traffic light<bb>936,80,959,135<bb>" [label="traffic light
+[importance: high]" fillcolor=red fontcolor=black]
+	"traffic light<bb>872,122,890,165<bb>" [label="traffic light
+[importance: high]" fillcolor=red fontcolor=black]
+	"traffic light<bb>1095,0,1160,110<bb>" [label="traffic light
+[importance: high]" fillcolor=red fontcolor=black]
+	"car<bb>227,323,282,344<bb>" [label="car
+Parked" fillcolor=green fontcolor=black]
+	"car<bb>1192,302,1279,343<bb>" [label="car
+Parked" fillcolor=green fontcolor=black]
+	"car<bb>1044,307,1123,344<bb>" [label="car
+Parked" fillcolor=green fontcolor=black]
+	"car<bb>1110,302,1177,341<bb>" [label="car
+Parked" fillcolor=green fontcolor=black]
+	"car<bb>576,316,603,334<bb>" [label="car
+Parked" fillcolor=green fontcolor=black]
+	"car<bb>1193,303,1249,343<bb>" [label="car
+Parked" fillcolor=green fontcolor=black]
+	"car<bb>1263,302,1279,342<bb>" [label="car
+Parked" fillcolor=green fontcolor=black]
+	"traffic light<bb>39,264,53,288<bb>" [label="traffic light
+[importance: high]" fillcolor=red fontcolor=black]
+	"traffic light<bb>134,271,153,295<bb>" [label="traffic light
+[importance: high]" fillcolor=red fontcolor=black]
+	"car<bb>1062,302,1178,344<bb>" [label="car
+Parked" fillcolor=green fontcolor=black]
+	"ego<po>711,708<po>" [label="ego
+[importance: high]" fillcolor=red fontcolor=black fontsize=18 height=1.3 penwidth=3 shape=doublecircle width=1.3]
+	"drivable area<pl>219,690,931,666<pl>" [label="drivable area" fillcolor=gray fontcolor=black]
+	"pedestrian<bb>746,299,767,347<bb>" [label="pedestrian
+[importance: high]" fillcolor=red fontcolor=black]
+	"crosswalk<po>345,483<po>" [label="crosswalk
+[importance: high]" fillcolor=red fontcolor=black]
+	"crosswalk<po>913,362<po>" [label="crosswalk
+[importance: high]" fillcolor=red fontcolor=black]
+	"traffic light<bb>646,257,658,286<bb>" [label="traffic light
+[importance: high]" fillcolor=red fontcolor=black]
+	"traffic light<bb>659,254,672,287<bb>" [label="traffic light
+[importance: high]" fillcolor=red fontcolor=black]
+	"traffic light<bb>680,256,693,286<bb>" [label="traffic light
+[importance: high]" fillcolor=red fontcolor=black]
+	"Four-Way Intersection<po>359,377<po>" [label="Four-Way Intersection
+[importance: high]
+Controlled" fillcolor=red fontcolor=black]
+	"car<bb>899,300,1047,343<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>899,300,1047,343<bb>" -> "car<bb>899,300,1047,343<bb>_status" [color=gray style=dotted]
+	"car<bb>899,300,1047,343<bb>_pos" [label="Position: On shoulder, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>899,300,1047,343<bb>" -> "car<bb>899,300,1047,343<bb>_pos" [color=gray style=dotted]
+	"car<bb>791,312,901,345<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>791,312,901,345<bb>" -> "car<bb>791,312,901,345<bb>_status" [color=gray style=dotted]
+	"car<bb>791,312,901,345<bb>_pos" [label="Position: On shoulder, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>791,312,901,345<bb>" -> "car<bb>791,312,901,345<bb>_pos" [color=gray style=dotted]
+	"traffic light<bb>552,208,566,236<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>552,208,566,236<bb>" -> "traffic light<bb>552,208,566,236<bb>_pos" [color=gray style=dotted]
+	"traffic light<bb>429,213,442,240<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>429,213,442,240<bb>" -> "traffic light<bb>429,213,442,240<bb>_pos" [color=gray style=dotted]
+	"traffic light<bb>936,80,959,135<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>936,80,959,135<bb>" -> "traffic light<bb>936,80,959,135<bb>_pos" [color=gray style=dotted]
+	"traffic light<bb>872,122,890,165<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>872,122,890,165<bb>" -> "traffic light<bb>872,122,890,165<bb>_pos" [color=gray style=dotted]
+	"traffic light<bb>1095,0,1160,110<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>1095,0,1160,110<bb>" -> "traffic light<bb>1095,0,1160,110<bb>_pos" [color=gray style=dotted]
+	"car<bb>227,323,282,344<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>227,323,282,344<bb>" -> "car<bb>227,323,282,344<bb>_status" [color=gray style=dotted]
+	"car<bb>227,323,282,344<bb>_pos" [label="Position: On shoulder, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>227,323,282,344<bb>" -> "car<bb>227,323,282,344<bb>_pos" [color=gray style=dotted]
+	"car<bb>1192,302,1279,343<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>1192,302,1279,343<bb>" -> "car<bb>1192,302,1279,343<bb>_status" [color=gray style=dotted]
+	"car<bb>1192,302,1279,343<bb>_pos" [label="Position: On shoulder, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>1192,302,1279,343<bb>" -> "car<bb>1192,302,1279,343<bb>_pos" [color=gray style=dotted]
+	"car<bb>1044,307,1123,344<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>1044,307,1123,344<bb>" -> "car<bb>1044,307,1123,344<bb>_status" [color=gray style=dotted]
+	"car<bb>1044,307,1123,344<bb>_pos" [label="Position: On shoulder, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>1044,307,1123,344<bb>" -> "car<bb>1044,307,1123,344<bb>_pos" [color=gray style=dotted]
+	"car<bb>1110,302,1177,341<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>1110,302,1177,341<bb>" -> "car<bb>1110,302,1177,341<bb>_status" [color=gray style=dotted]
+	"car<bb>1110,302,1177,341<bb>_pos" [label="Position: On shoulder, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>1110,302,1177,341<bb>" -> "car<bb>1110,302,1177,341<bb>_pos" [color=gray style=dotted]
+	"car<bb>576,316,603,334<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>576,316,603,334<bb>" -> "car<bb>576,316,603,334<bb>_status" [color=gray style=dotted]
+	"car<bb>576,316,603,334<bb>_pos" [label="Position: On shoulder, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>576,316,603,334<bb>" -> "car<bb>576,316,603,334<bb>_pos" [color=gray style=dotted]
+	"car<bb>1193,303,1249,343<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>1193,303,1249,343<bb>" -> "car<bb>1193,303,1249,343<bb>_status" [color=gray style=dotted]
+	"car<bb>1193,303,1249,343<bb>_pos" [label="Position: On shoulder, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>1193,303,1249,343<bb>" -> "car<bb>1193,303,1249,343<bb>_pos" [color=gray style=dotted]
+	"car<bb>1263,302,1279,342<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>1263,302,1279,342<bb>" -> "car<bb>1263,302,1279,342<bb>_status" [color=gray style=dotted]
+	"car<bb>1263,302,1279,342<bb>_pos" [label="Position: On shoulder, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>1263,302,1279,342<bb>" -> "car<bb>1263,302,1279,342<bb>_pos" [color=gray style=dotted]
+	"traffic light<bb>39,264,53,288<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>39,264,53,288<bb>" -> "traffic light<bb>39,264,53,288<bb>_pos" [color=gray style=dotted]
+	"traffic light<bb>134,271,153,295<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>134,271,153,295<bb>" -> "traffic light<bb>134,271,153,295<bb>_pos" [color=gray style=dotted]
+	"car<bb>1062,302,1178,344<bb>_status" [label="Status: Parked" fillcolor=lightgray shape=box]
+	"car<bb>1062,302,1178,344<bb>" -> "car<bb>1062,302,1178,344<bb>_status" [color=gray style=dotted]
+	"car<bb>1062,302,1178,344<bb>_pos" [label="Position: On shoulder, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>1062,302,1178,344<bb>" -> "car<bb>1062,302,1178,344<bb>_pos" [color=gray style=dotted]
+	"ego<po>711,708<po>_pos" [label="Position: ground-pixel-wise" fillcolor=lightblue shape=box]
+	"ego<po>711,708<po>" -> "ego<po>711,708<po>_pos" [color=gray style=dotted]
+	"crosswalk<po>345,483<po>_pos" [label="Position: left-pixel-wise" fillcolor=lightblue shape=box]
+	"crosswalk<po>345,483<po>" -> "crosswalk<po>345,483<po>_pos" [color=gray style=dotted]
+	"traffic light<bb>646,257,658,286<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>646,257,658,286<bb>" -> "traffic light<bb>646,257,658,286<bb>_pos" [color=gray style=dotted]
+	"traffic light<bb>659,254,672,287<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>659,254,672,287<bb>" -> "traffic light<bb>659,254,672,287<bb>_pos" [color=gray style=dotted]
+	"traffic light<bb>680,256,693,286<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>680,256,693,286<bb>" -> "traffic light<bb>680,256,693,286<bb>_pos" [color=gray style=dotted]
+	"Four-Way Intersection<po>359,377<po>_status" [label="Status: Controlled" fillcolor=lightgray shape=box]
+	"Four-Way Intersection<po>359,377<po>" -> "Four-Way Intersection<po>359,377<po>_status" [color=gray style=dotted]
+	"Four-Way Intersection<po>359,377<po>_pos" [label="Position: is Ahead of, left-pixel-wise" fillcolor=lightblue shape=box]
+	"Four-Way Intersection<po>359,377<po>" -> "Four-Way Intersection<po>359,377<po>_pos" [color=gray style=dotted]
+	"drivable area<pl>219,690,931,666<pl>" -> "ego<po>711,708<po>" [label=Chain color=orange fontcolor=gray penwidth=1.2]
+	"pedestrian<bb>746,299,767,347<bb>" -> "ego<po>711,708<po>" [label=Confounder color=purple fontcolor=red penwidth=2]
+	"crosswalk<po>913,362<po>" -> "ego<po>711,708<po>" [label=Direct color=red fontcolor=red penwidth=2]
+	legend [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD COLSPAN="3"><B>Legend</B></TD></TR><TR><TD COLSPAN="3"><B>Object Safety (node fill color)</B></TD></TR><TR><TD>Affects Safety</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Requires Monitoring</TD><TD BGCOLOR="blue" WIDTH="40"></TD><TD></TD></TR><TR><TD>Potentially Affect Safety</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Does Not Affect Safety</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Causal Relation (edge line color)</B></TD></TR><TR><TD>Direct</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Chain</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Confounder</TD><TD BGCOLOR="purple" WIDTH="40"></TD><TD></TD></TR><TR><TD>Correlations</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Importance</B></TD></TR><TR><TD>High</TD><TD>Thicker edge</TD><TD>Label shows "[importance: high]"</TD></TR><TR><TD>Medium</TD><TD>Normal edge</TD><TD>Label shows "[importance: medium]"</TD></TR><TR><TD>Low</TD><TD>Normal edge</TD><TD>Label shows "[importance: low]"</TD></TR></TABLE>> shape=plaintext]
+}

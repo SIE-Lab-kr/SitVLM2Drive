@@ -1,0 +1,85 @@
+// Causal graph for frame_0016.jpg
+digraph causal_test0021_0016 {
+	node [fontname=Helvetica shape=ellipse style=filled]
+	edge [fontname=Helvetica]
+	bgcolor=mistyrose
+	"traffic light<bb>733,120,760,175<bb>" [label="traffic light
+[importance: high]
+Red, Is Controlling the left direction" fillcolor=red fontcolor=black]
+	"traffic light<bb>928,121,954,171<bb>" [label="traffic light
+[importance: low]
+Green, Is Controlling the straight direction" fillcolor=orange fontcolor=black]
+	"car<bb>962,115,1046,163<bb>" [label="car
+Moving" fillcolor=green fontcolor=black]
+	"car<bb>172,351,329,420<bb>" [label="car
+Moving" fillcolor=green fontcolor=black]
+	"car<bb>423,334,476,370<bb>" [label="car
+Moving" fillcolor=green fontcolor=black]
+	"truck<bb>1,207,259,413<bb>" [label="truck
+Moving" fillcolor=green fontcolor=black]
+	"crosswalk<po>101,671<po>" [label="crosswalk
+[importance: low]
+Visible, Between two lines, Clear of pedestrians" fillcolor=orange fontcolor=black]
+	"T-Intersection<po>425,474<po>" [label="T-Intersection
+[importance: high]
+Controlled" fillcolor=red fontcolor=black]
+	"bridge<po>523,208<po>" [label="bridge
+Visible" fillcolor=green fontcolor=black]
+	"car<bb>1085,329,1108,349<bb>" [label="car
+Moving" fillcolor=green fontcolor=black]
+	"car<bb>1113,326,1144,348<bb>" [label="car
+Moving" fillcolor=green fontcolor=black]
+	"ego<po>711,708<po>" [label="ego
+[importance: high]
+Stopped" fillcolor=red fontcolor=black fontsize=18 height=1.3 penwidth=3 shape=doublecircle width=1.3]
+	"traffic light<bb>733,120,760,175<bb>_status" [label="Status: Red, Is Controlling the left direction" fillcolor=lightgray shape=box]
+	"traffic light<bb>733,120,760,175<bb>" -> "traffic light<bb>733,120,760,175<bb>_status" [color=gray style=dotted]
+	"traffic light<bb>733,120,760,175<bb>_pos" [label="Position: Above intersection, Center side of, is Ahead of, After intersection" fillcolor=lightblue shape=box]
+	"traffic light<bb>733,120,760,175<bb>" -> "traffic light<bb>733,120,760,175<bb>_pos" [color=gray style=dotted]
+	"traffic light<bb>928,121,954,171<bb>_status" [label="Status: Green, Is Controlling the straight direction" fillcolor=lightgray shape=box]
+	"traffic light<bb>928,121,954,171<bb>" -> "traffic light<bb>928,121,954,171<bb>_status" [color=gray style=dotted]
+	"traffic light<bb>928,121,954,171<bb>_pos" [label="Position: Above intersection, Center side of, is Ahead of, After intersection, front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>928,121,954,171<bb>" -> "traffic light<bb>928,121,954,171<bb>_pos" [color=gray style=dotted]
+	"car<bb>962,115,1046,163<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"car<bb>962,115,1046,163<bb>" -> "car<bb>962,115,1046,163<bb>_status" [color=gray style=dotted]
+	"car<bb>962,115,1046,163<bb>_pos" [label="Position: Left side of, On Overpass, Opposite side of, is Above, On Bridge, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>962,115,1046,163<bb>" -> "car<bb>962,115,1046,163<bb>_pos" [color=gray style=dotted]
+	"car<bb>172,351,329,420<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"car<bb>172,351,329,420<bb>" -> "car<bb>172,351,329,420<bb>_status" [color=gray style=dotted]
+	"car<bb>172,351,329,420<bb>_pos" [label="Position: Left side of, At intersection, Is Driving on intersection, Opposite side of, left-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>172,351,329,420<bb>" -> "car<bb>172,351,329,420<bb>_pos" [color=gray style=dotted]
+	"car<bb>423,334,476,370<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"car<bb>423,334,476,370<bb>" -> "car<bb>423,334,476,370<bb>_status" [color=gray style=dotted]
+	"car<bb>423,334,476,370<bb>_pos" [label="Position: Left side of, At intersection, Is Driving on intersection, Opposite side of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>423,334,476,370<bb>" -> "car<bb>423,334,476,370<bb>_pos" [color=gray style=dotted]
+	"truck<bb>1,207,259,413<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"truck<bb>1,207,259,413<bb>" -> "truck<bb>1,207,259,413<bb>_status" [color=gray style=dotted]
+	"truck<bb>1,207,259,413<bb>_pos" [label="Position: Left side of, At intersection, Is Driving on intersection, Opposite side of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"truck<bb>1,207,259,413<bb>" -> "truck<bb>1,207,259,413<bb>_pos" [color=gray style=dotted]
+	"crosswalk<po>101,671<po>_status" [label="Status: Visible, Between two lines, Clear of pedestrians" fillcolor=lightgray shape=box]
+	"crosswalk<po>101,671<po>" -> "crosswalk<po>101,671<po>_status" [color=gray style=dotted]
+	"crosswalk<po>101,671<po>_pos" [label="Position: is Ahead of, At intersection, Near of, left-pixel-wise" fillcolor=lightblue shape=box]
+	"crosswalk<po>101,671<po>" -> "crosswalk<po>101,671<po>_pos" [color=gray style=dotted]
+	"T-Intersection<po>425,474<po>_status" [label="Status: Controlled" fillcolor=lightgray shape=box]
+	"T-Intersection<po>425,474<po>" -> "T-Intersection<po>425,474<po>_status" [color=gray style=dotted]
+	"T-Intersection<po>425,474<po>_pos" [label="Position: is Ahead of, ground-pixel-wise" fillcolor=lightblue shape=box]
+	"T-Intersection<po>425,474<po>" -> "T-Intersection<po>425,474<po>_pos" [color=gray style=dotted]
+	"bridge<po>523,208<po>_status" [label="Status: Visible" fillcolor=lightgray shape=box]
+	"bridge<po>523,208<po>" -> "bridge<po>523,208<po>_status" [color=gray style=dotted]
+	"bridge<po>523,208<po>_pos" [label="Position: is Ahead of, After intersection, is Below, front-pixel-wise" fillcolor=lightblue shape=box]
+	"bridge<po>523,208<po>" -> "bridge<po>523,208<po>_pos" [color=gray style=dotted]
+	"car<bb>1085,329,1108,349<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"car<bb>1085,329,1108,349<bb>" -> "car<bb>1085,329,1108,349<bb>_status" [color=gray style=dotted]
+	"car<bb>1085,329,1108,349<bb>_pos" [label="Position: Far of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>1085,329,1108,349<bb>" -> "car<bb>1085,329,1108,349<bb>_pos" [color=gray style=dotted]
+	"car<bb>1113,326,1144,348<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"car<bb>1113,326,1144,348<bb>" -> "car<bb>1113,326,1144,348<bb>_status" [color=gray style=dotted]
+	"car<bb>1113,326,1144,348<bb>_pos" [label="Position: Far of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>1113,326,1144,348<bb>" -> "car<bb>1113,326,1144,348<bb>_pos" [color=gray style=dotted]
+	"ego<po>711,708<po>_status" [label="Status: Stopped" fillcolor=lightgray shape=box]
+	"ego<po>711,708<po>" -> "ego<po>711,708<po>_status" [color=gray style=dotted]
+	"ego<po>711,708<po>_pos" [label="Position: At intersection, Lane 1, ground-pixel-wise" fillcolor=lightblue shape=box]
+	"ego<po>711,708<po>" -> "ego<po>711,708<po>_pos" [color=gray style=dotted]
+	"traffic light<bb>733,120,760,175<bb>" -> "ego<po>711,708<po>" [label=Direct color=red fontcolor=red penwidth=2]
+	legend [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD COLSPAN="3"><B>Legend</B></TD></TR><TR><TD COLSPAN="3"><B>Object Safety (node fill color)</B></TD></TR><TR><TD>Affects Safety</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Requires Monitoring</TD><TD BGCOLOR="blue" WIDTH="40"></TD><TD></TD></TR><TR><TD>Potentially Affect Safety</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Does Not Affect Safety</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Causal Relation (edge line color)</B></TD></TR><TR><TD>Direct</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Chain</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Confounder</TD><TD BGCOLOR="purple" WIDTH="40"></TD><TD></TD></TR><TR><TD>Correlations</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Importance</B></TD></TR><TR><TD>High</TD><TD>Thicker edge</TD><TD>Label shows "[importance: high]"</TD></TR><TR><TD>Medium</TD><TD>Normal edge</TD><TD>Label shows "[importance: medium]"</TD></TR><TR><TD>Low</TD><TD>Normal edge</TD><TD>Label shows "[importance: low]"</TD></TR></TABLE>> shape=plaintext]
+}

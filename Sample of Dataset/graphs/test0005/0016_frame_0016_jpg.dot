@@ -1,0 +1,47 @@
+// Causal graph for frame_0016.jpg
+digraph causal_test0005_0016 {
+	node [fontname=Helvetica shape=ellipse style=filled]
+	edge [fontname=Helvetica]
+	bgcolor=honeydew
+	"drivable area<pl>977,666,190,667<pl>" [label="drivable area" fillcolor=gray fontcolor=black]
+	"truck<bb>782,228,1073,435<bb>" [label="truck
+[importance: medium]
+Moving, Decelerating" fillcolor=orange fontcolor=black]
+	"car<bb>746,311,793,362<bb>" [label="car
+[importance: low]
+Moving" fillcolor=green fontcolor=black]
+	"car<bb>594,314,691,401<bb>" [label="car
+[importance: high]
+Moving" fillcolor=red fontcolor=black]
+	"road<po>908,593<po>" [label="road
+[importance: high]
+Two-lane, Median-Raised, Lane_Dashed_Line_White_1" fillcolor=red fontcolor=black]
+	"car<bb>511,313,597,374<bb>" [label="car
+[importance: high]
+Turning Left" fillcolor=red fontcolor=black]
+	"ego<po>711,708<po>" [label="ego
+[importance: high]" fillcolor=green fontcolor=black fontsize=18 height=1.3 penwidth=3 shape=doublecircle width=1.3]
+	"truck<bb>782,228,1073,435<bb>_status" [label="Status: Moving, Decelerating" fillcolor=lightgray shape=box]
+	"truck<bb>782,228,1073,435<bb>" -> "truck<bb>782,228,1073,435<bb>_status" [color=gray style=dotted]
+	"truck<bb>782,228,1073,435<bb>_pos" [label="Position: Right side of, Lane 1, front-pixel-wise" fillcolor=lightblue shape=box]
+	"truck<bb>782,228,1073,435<bb>" -> "truck<bb>782,228,1073,435<bb>_pos" [color=gray style=dotted]
+	"car<bb>746,311,793,362<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"car<bb>746,311,793,362<bb>" -> "car<bb>746,311,793,362<bb>_status" [color=gray style=dotted]
+	"car<bb>746,311,793,362<bb>_pos" [label="Position: Right side of, Lane 1, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>746,311,793,362<bb>" -> "car<bb>746,311,793,362<bb>_pos" [color=gray style=dotted]
+	"car<bb>594,314,691,401<bb>_status" [label="Status: Moving" fillcolor=lightgray shape=box]
+	"car<bb>594,314,691,401<bb>" -> "car<bb>594,314,691,401<bb>_status" [color=gray style=dotted]
+	"car<bb>594,314,691,401<bb>_pos" [label="Position: is Ahead of, Lane 2, In same lane of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>594,314,691,401<bb>" -> "car<bb>594,314,691,401<bb>_pos" [color=gray style=dotted]
+	"road<po>908,593<po>_status" [label="Status: Two-lane, Median-Raised, Lane_Dashed_Line_White_1" fillcolor=lightgray shape=box]
+	"road<po>908,593<po>" -> "road<po>908,593<po>_status" [color=gray style=dotted]
+	"car<bb>511,313,597,374<bb>_status" [label="Status: Turning Left" fillcolor=lightgray shape=box]
+	"car<bb>511,313,597,374<bb>" -> "car<bb>511,313,597,374<bb>_status" [color=gray style=dotted]
+	"car<bb>511,313,597,374<bb>_pos" [label="Position: Lane 2, front-pixel-wise" fillcolor=lightblue shape=box]
+	"car<bb>511,313,597,374<bb>" -> "car<bb>511,313,597,374<bb>_pos" [color=gray style=dotted]
+	"ego<po>711,708<po>_pos" [label="Position: ground-pixel-wise" fillcolor=lightblue shape=box]
+	"ego<po>711,708<po>" -> "ego<po>711,708<po>_pos" [color=gray style=dotted]
+	"drivable area<pl>977,666,190,667<pl>" -> "ego<po>711,708<po>" [label=Chain color=orange fontcolor=gray penwidth=1.2]
+	"road<po>908,593<po>" -> "ego<po>711,708<po>" [label=Direct color=red fontcolor=red penwidth=2]
+	legend [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD COLSPAN="3"><B>Legend</B></TD></TR><TR><TD COLSPAN="3"><B>Object Safety (node fill color)</B></TD></TR><TR><TD>Affects Safety</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Requires Monitoring</TD><TD BGCOLOR="blue" WIDTH="40"></TD><TD></TD></TR><TR><TD>Potentially Affect Safety</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Does Not Affect Safety</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Causal Relation (edge line color)</B></TD></TR><TR><TD>Direct</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Chain</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Confounder</TD><TD BGCOLOR="purple" WIDTH="40"></TD><TD></TD></TR><TR><TD>Correlations</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Importance</B></TD></TR><TR><TD>High</TD><TD>Thicker edge</TD><TD>Label shows "[importance: high]"</TD></TR><TR><TD>Medium</TD><TD>Normal edge</TD><TD>Label shows "[importance: medium]"</TD></TR><TR><TD>Low</TD><TD>Normal edge</TD><TD>Label shows "[importance: low]"</TD></TR></TABLE>> shape=plaintext]
+}

@@ -37,9 +37,10 @@ SitLLM2Drive/
 │     │   ├── frame_000001.jpg
 │     │   └── ...
 │     └── video_0002/
-├──   diagrams/
+├──   graphs/
 │     ├── video_0001/
 │     │   ├── frame_000001_diagram.png
+│     │   ├── frame_000001_diagram.dot
 │     │   └── ...
 │     └── video_0002/
 ├── docs/                          # Extended documentation and visuals
@@ -175,6 +176,64 @@ example:
 - Safety status + rationale
 - Scene Understanding & Captioning
 - Intent & Maneuver Prediction
+
+## 🧠 Causal Graph Visualization
+
+SitVLM2Drive does not only provide bounding boxes and Q&A pairs – it also encodes **explicit causal structure** between objects, scene context, and the ego vehicle.
+
+### Single-Frame Example
+
+The figure below shows one frame with:
+
+- **Color-coded object outlines** by *Object_Safety*  
+  - Red – *Affects Safety*  
+  - Orange – *Potentially Affect Safety*  
+  - Blue – *Requires Monitoring*  
+  - Green – *Does Not Affect Safety*  
+- **Ego vehicle** highlighted with a **thicker outline**, whose color reflects the scene-level safety label  
+  - Green – scene labeled as *safe*  
+  - Red – scene labeled as *unsafe*  
+- **Directed arrows** between objects, color-coded by **Causal_Relation**  
+  - Red – *Direct*  
+  - Orange – *Chain*  
+  - Purple – *Confounder*  
+  - Green – *Correlations*  
+- Object labels optionally include **importance ranking** (high / medium / low), which reflects the driver’s attention priority.
+
+<p align="center">
+  <img src="figs/example_causal_frame.png" alt="Single-frame causal graph visualization" width="80%">
+</p>
+
+### Multi-Frame Causal Strip
+
+To illustrate temporal evolution, we also render a **sequence of annotated frames** as a horizontal strip.  
+This allows you to see how the causal graph and safety-critical objects change as the ego vehicle approaches an intersection.
+
+Each frame in the strip:
+
+- Shows object bounding boxes or points (e.g., traffic lights, crosswalks, pedestrians, ego vehicle)
+- Draws arrows between objects linked by a non-empty `Causal_Relation`
+- Keeps the **same color conventions** for safety and causal types as above
+- Includes a small text label under each frame (e.g., `frame_0000`, `frame_0005`, …)
+
+A **single legend** is shared across the entire strip and placed at the bottom for clarity.
+
+<p align="center">
+  <img src="figs/example_causal_strip.png" alt="Temporal strip of frames with causal graph overlays and shared legend" width="100%">
+</p>
+
+These visualizations are generated directly from the JSON annotations in:
+
+```bash
+Sample of Dataset/
+├── data/        # JSON annotations (per video)
+├── frames/      # Raw frame images (per video)
+└── graphs/      # Auto-generated diagrams and annotated frames
+    └── video_xxxx/
+        ├── 0000_frame_0000_diagram.png
+        ├── 0000_frame_0000_annotated.png
+        ├── ...
+        └── video_xxxx_causal_strip.png
 
 ## 🔐 License
 

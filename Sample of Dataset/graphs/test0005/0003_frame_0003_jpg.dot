@@ -1,0 +1,82 @@
+// Causal graph for frame_0003.jpg
+digraph causal_test0005_0003 {
+	node [fontname=Helvetica shape=ellipse style=filled]
+	edge [fontname=Helvetica]
+	bgcolor=mistyrose
+	"ego<po>711,708<po>" [label="ego
+[importance: high]" fillcolor=red fontcolor=black fontsize=18 height=1.3 penwidth=3 shape=doublecircle width=1.3]
+	"traffic light<bb>242,232,258,280<bb>" [label="traffic light
+[importance: low]
+Red" fillcolor=green fontcolor=black]
+	"traffic light<bb>1014,19,1057,128<bb>" [label="traffic light
+[importance: high]
+Red" fillcolor=red fontcolor=black]
+	"traffic light<bb>932,30,982,125<bb>" [label="traffic light
+[importance: high]
+Not Visible" fillcolor=red fontcolor=black]
+	"Four-Way Intersection<po>19,539<po>" [label="Four-Way Intersection
+[importance: high]
+Controlled" fillcolor=gray fontcolor=black]
+	"crosswalk<po>657,496<po>" [label="crosswalk
+[importance: high]" fillcolor=gray fontcolor=black]
+	"Train Lane<po>1164,593<po>" [label="Train Lane
+[importance: high]" fillcolor=gray fontcolor=black]
+	"drivable area<pl>190,703,971,664<pl>" [label="drivable area" fillcolor=gray fontcolor=black]
+	"traffic light<bb>939,149,1004,252<bb>" [label="traffic light
+[importance: high]
+Not Visible" fillcolor=red fontcolor=black]
+	"TS_keep_left_road<bb>983,279,1019,333<bb>" [label="TS_keep_left_road
+[importance: high]
+Visible, Right-of-Way" fillcolor=red fontcolor=black]
+	"crosswalk<po>33,410<po>" [label="crosswalk
+[importance: low]
+Visible" fillcolor=green fontcolor=black]
+	"road<po>718,406<po>" [label="road
+[importance: high]
+Two-lane, Median-Raised, Lane_Dashed_Line_White_1" fillcolor=red fontcolor=black]
+	"traffic light<bb>496,202,535,260<bb>" [label="traffic light
+[importance: low]
+Not Visible, Is Controlling Opposite Direction" fillcolor=green fontcolor=black]
+	"ego<po>711,708<po>_pos" [label="Position: ground-pixel-wise" fillcolor=lightblue shape=box]
+	"ego<po>711,708<po>" -> "ego<po>711,708<po>_pos" [color=gray style=dotted]
+	"traffic light<bb>242,232,258,280<bb>_status" [label="Status: Red" fillcolor=lightgray shape=box]
+	"traffic light<bb>242,232,258,280<bb>" -> "traffic light<bb>242,232,258,280<bb>_status" [color=gray style=dotted]
+	"traffic light<bb>242,232,258,280<bb>_pos" [label="Position: Left side of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>242,232,258,280<bb>" -> "traffic light<bb>242,232,258,280<bb>_pos" [color=gray style=dotted]
+	"traffic light<bb>1014,19,1057,128<bb>_status" [label="Status: Red" fillcolor=lightgray shape=box]
+	"traffic light<bb>1014,19,1057,128<bb>" -> "traffic light<bb>1014,19,1057,128<bb>_status" [color=gray style=dotted]
+	"traffic light<bb>1014,19,1057,128<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>1014,19,1057,128<bb>" -> "traffic light<bb>1014,19,1057,128<bb>_pos" [color=gray style=dotted]
+	"traffic light<bb>932,30,982,125<bb>_status" [label="Status: Not Visible" fillcolor=lightgray shape=box]
+	"traffic light<bb>932,30,982,125<bb>" -> "traffic light<bb>932,30,982,125<bb>_status" [color=gray style=dotted]
+	"traffic light<bb>932,30,982,125<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>932,30,982,125<bb>" -> "traffic light<bb>932,30,982,125<bb>_pos" [color=gray style=dotted]
+	"Four-Way Intersection<po>19,539<po>_status" [label="Status: Controlled" fillcolor=lightgray shape=box]
+	"Four-Way Intersection<po>19,539<po>" -> "Four-Way Intersection<po>19,539<po>_status" [color=gray style=dotted]
+	"Four-Way Intersection<po>19,539<po>_pos" [label="Position: left-pixel-wise" fillcolor=lightblue shape=box]
+	"Four-Way Intersection<po>19,539<po>" -> "Four-Way Intersection<po>19,539<po>_pos" [color=gray style=dotted]
+	"traffic light<bb>939,149,1004,252<bb>_status" [label="Status: Not Visible" fillcolor=lightgray shape=box]
+	"traffic light<bb>939,149,1004,252<bb>" -> "traffic light<bb>939,149,1004,252<bb>_status" [color=gray style=dotted]
+	"traffic light<bb>939,149,1004,252<bb>_pos" [label="Position: front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>939,149,1004,252<bb>" -> "traffic light<bb>939,149,1004,252<bb>_pos" [color=gray style=dotted]
+	"TS_keep_left_road<bb>983,279,1019,333<bb>_status" [label="Status: Visible, Right-of-Way" fillcolor=lightgray shape=box]
+	"TS_keep_left_road<bb>983,279,1019,333<bb>" -> "TS_keep_left_road<bb>983,279,1019,333<bb>_status" [color=gray style=dotted]
+	"TS_keep_left_road<bb>983,279,1019,333<bb>_pos" [label="Position: Right side of, At intersection" fillcolor=lightblue shape=box]
+	"TS_keep_left_road<bb>983,279,1019,333<bb>" -> "TS_keep_left_road<bb>983,279,1019,333<bb>_pos" [color=gray style=dotted]
+	"crosswalk<po>33,410<po>_status" [label="Status: Visible" fillcolor=lightgray shape=box]
+	"crosswalk<po>33,410<po>" -> "crosswalk<po>33,410<po>_status" [color=gray style=dotted]
+	"crosswalk<po>33,410<po>_pos" [label="Position: Left side of, left-pixel-wise" fillcolor=lightblue shape=box]
+	"crosswalk<po>33,410<po>" -> "crosswalk<po>33,410<po>_pos" [color=gray style=dotted]
+	"road<po>718,406<po>_status" [label="Status: Two-lane, Median-Raised, Lane_Dashed_Line_White_1" fillcolor=lightgray shape=box]
+	"road<po>718,406<po>" -> "road<po>718,406<po>_status" [color=gray style=dotted]
+	"traffic light<bb>496,202,535,260<bb>_status" [label="Status: Not Visible, Is Controlling Opposite Direction" fillcolor=lightgray shape=box]
+	"traffic light<bb>496,202,535,260<bb>" -> "traffic light<bb>496,202,535,260<bb>_status" [color=gray style=dotted]
+	"traffic light<bb>496,202,535,260<bb>_pos" [label="Position: Right side of, front-pixel-wise" fillcolor=lightblue shape=box]
+	"traffic light<bb>496,202,535,260<bb>" -> "traffic light<bb>496,202,535,260<bb>_pos" [color=gray style=dotted]
+	"crosswalk<po>657,496<po>" -> "ego<po>711,708<po>" [label=Direct color=red fontcolor=red penwidth=2]
+	"Train Lane<po>1164,593<po>" -> "ego<po>711,708<po>" [label=Direct color=red fontcolor=red penwidth=2]
+	"drivable area<pl>190,703,971,664<pl>" -> "ego<po>711,708<po>" [label=Chain color=orange fontcolor=gray penwidth=1.2]
+	"TS_keep_left_road<bb>983,279,1019,333<bb>" -> "ego<po>711,708<po>" [label=Confounder color=purple fontcolor=red penwidth=2]
+	"road<po>718,406<po>" -> "ego<po>711,708<po>" [label=Direct color=red fontcolor=red penwidth=2]
+	legend [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD COLSPAN="3"><B>Legend</B></TD></TR><TR><TD COLSPAN="3"><B>Object Safety (node fill color)</B></TD></TR><TR><TD>Affects Safety</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Requires Monitoring</TD><TD BGCOLOR="blue" WIDTH="40"></TD><TD></TD></TR><TR><TD>Potentially Affect Safety</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Does Not Affect Safety</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Causal Relation (edge line color)</B></TD></TR><TR><TD>Direct</TD><TD BGCOLOR="red" WIDTH="40"></TD><TD></TD></TR><TR><TD>Chain</TD><TD BGCOLOR="orange" WIDTH="40"></TD><TD></TD></TR><TR><TD>Confounder</TD><TD BGCOLOR="purple" WIDTH="40"></TD><TD></TD></TR><TR><TD>Correlations</TD><TD BGCOLOR="green" WIDTH="40"></TD><TD></TD></TR><TR><TD>Unknown</TD><TD BGCOLOR="gray" WIDTH="40"></TD><TD></TD></TR><TR><TD COLSPAN="3"><B>Importance</B></TD></TR><TR><TD>High</TD><TD>Thicker edge</TD><TD>Label shows "[importance: high]"</TD></TR><TR><TD>Medium</TD><TD>Normal edge</TD><TD>Label shows "[importance: medium]"</TD></TR><TR><TD>Low</TD><TD>Normal edge</TD><TD>Label shows "[importance: low]"</TD></TR></TABLE>> shape=plaintext]
+}

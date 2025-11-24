@@ -1,0 +1,27 @@
+strict digraph {
+SAFE [color=green, size=4500, label=Ego, subset=0];
+"Ego-Vehicle" [color=teal, size=3200, label="Ego-Vehicle", subset=1];
+car [color=green, size=2600, label=car, subset=2];
+car_status [color=lightgray, size=2100, label=Parked, subset=3];
+car_position [color=lightblue, size=2100, label="On shoulder,\nfront-pixel-wise", subset=3];
+"Ego-Ego" [color=teal, size=3200, label="Ego-Ego", subset=1];
+"Ego-Infrastructure" [color=teal, size=3200, label="Ego-\nInfrastructure", subset=1];
+"drivable area" [color=gray, size=2600, label="drivable area", subset=2];
+"drivable area_status" [color=lightgray, size=2100, label="", subset=3];
+"drivable area_position" [color=lightblue, size=2100, label="", subset=3];
+TS_Speed_Limit_45 [color=red, size=2600, label="TS_Speed_Limit_\n45", subset=2];
+TS_Speed_Limit_45_status [color=lightgray, size=2100, label="", subset=3];
+TS_Speed_Limit_45_position [color=lightblue, size=2100, label="", subset=3];
+SAFE -> "Ego-Vehicle";
+SAFE -> "Ego-Ego";
+SAFE -> "Ego-Infrastructure";
+"Ego-Vehicle" -> car [color=gray];
+car -> car_status [color=gray];
+car -> car_position [color=gray];
+"Ego-Infrastructure" -> "drivable area" [color=gray];
+"Ego-Infrastructure" -> TS_Speed_Limit_45 [color=red];
+"drivable area" -> "drivable area_status" [color=gray];
+"drivable area" -> "drivable area_position" [color=gray];
+TS_Speed_Limit_45 -> TS_Speed_Limit_45_status [color=gray];
+TS_Speed_Limit_45 -> TS_Speed_Limit_45_position [color=gray];
+}
