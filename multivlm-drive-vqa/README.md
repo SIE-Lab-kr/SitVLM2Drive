@@ -7,7 +7,7 @@ Supported backends:
 
 - **LLaMA Vision** ( `meta-llama/Llama-3.2-11B-Vision`)
 - **Qwen2.5-VL** (`Qwen/Qwen2.5-VL-7B-Instruct`)
-- **InternVL** ( `OpenGVLab/InternVL3-1B-hf`)
+- **InternVL** ( `OpenGVLab/InternVL3_5-8B`)
 
 Common features:
 
@@ -79,11 +79,11 @@ python train.py \
   --model-id Qwen/Qwen2.5-VL-7B-Instruct \
   --output-dir result_qwen
 
-# InternVL (HF 1B model – good starting point)
+# InternVL (8B model – good starting point)
 python train.py \
   --data-root /home/USER/set2Drive \
   --model-type internvl \
-  --model-id OpenGVLab/InternVL3-1B-hf \
+  --model-id OpenGVLab/InternVL3_5-8B-hf \
   --output-dir result_internvl
 
 
@@ -126,7 +126,7 @@ best_model/checkpoint_epoch_X/ – best checkpoint (lowest validation loss)
 
 5. Notes
 
-For very large models (LLaMA Vision 11B, Qwen2.5-VL-7B, InternVL3.5-1B),
+For very large models (LLaMA Vision 11B, Qwen2.5-VL-7B, InternVL3.5-8B),
 you may need 4-bit quantization + LoRA and multiple GPUs.
 
 This repo is structured so you can plug in your own fine-tuning tricks
