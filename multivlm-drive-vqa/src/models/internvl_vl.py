@@ -4,11 +4,11 @@ from transformers import AutoModelForImageTextToText, AutoProcessor
 
 def build_internvl_vl(model_id=None):
     """
-    Tested with: OpenGVLab/InternVL3-1B-hf (HF style)
+    Tested with: OpenGVLab/InternVL3_5-8B (HF style)
     For InternVL3.5 HF models, make sure they are compatible with AutoModelForImageTextToText.
     """
     if model_id is None:
-        model_id = "OpenGVLab/InternVL3-1B-hf"
+        model_id = "OpenGVLab/InternVL3_5-8B"
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
